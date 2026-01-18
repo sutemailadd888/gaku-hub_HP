@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAKU-HUB - 想いが、カタチに。出会いが、ミライに。</title>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600&family=Noto+Sans+JP:wght@400;700&family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ========================================
+         Header / Navigation
+    ======================================== -->
+    <header>
+        <div class="logo">GAKU-HUB</div>
+
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="#concept">Concept</a></li>
+                <li><a href="#service">Service</a></li>
+                <li><a href="#exhibition">Exhibition</a></li>
+                <li><a href="#members">Members</a></li>
+                <li><a href="#contact"class="nav-btn">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ========================================
+         Hero Section (The Entrance)
+         背景スライドショー・中央にキャッチコピー配置
+    ======================================== -->
+    <section class="hero">
+        <!-- 背景スライドショー -->
+        <div class="hero-background">
+            <div class="hero-slide active">
+                <img src="images/hero-image-1.jpg" alt="GAKU-HUB Vision 1">
+            </div>
+            <div class="hero-slide">
+                <img src="images/hero-image-2.jpg" alt="GAKU-HUB Vision 2">
+            </div>
+            <div class="hero-slide">
+                <img src="images/hero-image-3.jpg" alt="GAKU-HUB Vision 3">
+            </div>
+            <div class="hero-slide">
+                <img src="images/hero-image-4.jpg" alt="GAKU-HUB Vision 4">
+            </div>
+        </div>
+        
+        <!-- 可読性確保用の白フィルター -->
+        <div class="hero-overlay"></div>
+        
+        <!-- 中央配置のキャッチコピー -->
+        <div class="hero-text">
+            <h1>想いが、カタチに。<br>出会いが、ミライに。</h1>
+            <p>Link up your story, Link up your future.</p>
+        </div>
+    </section>
+
+      <!-- Concept Section - 3ブロック構成に変更、HTML内で<br>で改行制御 -->
+    <!-- ========================================
+         Concept Section (Philosophy) - 縦書き
+    ======================================== -->
+    <section id="concept" class="concept">
+        <div class="concept-container">
+            <div class="concept-block title-block">
+                <h2 class="vertical-text">
+                    溢れる『学』が、<br>
+                    誰かの『力』になる。
+                </h2>
+            </div>
+
+            <div class="concept-block body-block">
+                <p class="vertical-text">
+                    GAKU-HUBは、<br>
+                    学生の『好き』という熱量を、<br>
+                    社会を動かす力に変える<br>
+                    『学の拠点』です。
+                </p>
+            </div>
+
+            <div class="concept-block body-block">
+                <p class="vertical-text">
+                    私たちは、<br>
+                    埋もれがちな『物語』を発掘・可視化し、<br>
+                    最高の出会いで<br>
+                    未来を加速させます。
+                </p>
+            </div>
+        </div>
+
+        <div class="concept-btn-wrapper">
+            <a href="#" class="view-all-btn">View Philosophy</a>
+        </div>
+
+    </section>
+
+
+    <!-- ========================================
+         Business Model Section (The Structure)
+    ======================================== -->
+    <section class="business-model" id="service">
+        <h2 class="section-title">SERVICE</h2>
+        <p class="section-subtitle">3 Phases</p>
+
+        <div class="phases-container">
+            <div class="phase fade-in">
+                <div class="phase-number">01</div>
+                <h3 class="phase-title">Acquisition</h3>
+                <p class="phase-label">出会う・集める</p>
+                <p class="phase-description">各種サービスやイベントを通じ、熱量ある会員を獲得する。</p>
+            </div>
+
+            <div class="phase-line"></div>
+
+            <div class="phase fade-in">
+                <div class="phase-number">02</div>
+                <h3 class="phase-title">Incubation</h3>
+                <p class="phase-label">混ざる・育てる</p>
+                <p class="phase-description">有料コミュニティでWANTとHAVEが交差し、新たな価値を創出する。</p>
+            </div>
+
+            <div class="phase-line"></div>
+
+            <div class="phase fade-in">
+                <div class="phase-number">03</div>
+                <h3 class="phase-title">Realization</h3>
+                <p class="phase-label">結実する・社会を変える</p>
+                <p class="phase-description">HR支援・共創マッチングにより、社会へ価値を実装する。</p>
+            </div>
+        </div>
+
+        <div style="text-align: center;">
+            <a href="#" class="view-all-btn">View All Service</a>
+        </div>
+
+    </section>
+
+    <!-- ========================================
+         Exhibition Section (Portfolio)
+         額縁演出・雑誌風レイアウト
+    ======================================== -->
+    <section class="exhibition" id="exhibition">
+        <h2 class="section-title">COLLECTION</h2>
+
+        <div class="tab-navigation">
+            <button class="tab-btn active" data-tab="works">制作実績</button>
+            <button class="tab-btn" data-tab="events">イベント</button>
+            <button class="tab-btn" data-tab="stories">共創ストーリー</button>
+        </div>
+
+        <div class="tab-wrapper">
+            
+            <div id="works" class="tab-content active">
+                <div class="exhibition-grid">
+                    <div class="exhibition-item fade-in">
+                        <div class="exhibition-image">
+                            <img src="/placeholder.svg?height=350&width=400" alt="Work 1">
+                            <div class="exhibition-title">学生ポートフォリオサイト制作</div>
+                        </div>
+                    </div>
+                    <div class="exhibition-item fade-in">
+                        <div class="exhibition-image">
+                            <img src="/placeholder.svg?height=350&width=400" alt="Work 2">
+                            <div class="exhibition-title">カフェブランディング支援</div>
+                        </div>
+                    </div>
+                    </div>
+                <div style="text-align: center;">
+                    <a href="#" class="view-all-btn">View All Works</a>
+                </div>
+            </div>
+
+            <div id="events" class="tab-content">
+                <div class="exhibition-grid">
+                    <div class="exhibition-item fade-in">
+                        <div class="exhibition-image">
+                            <img src="/placeholder.svg?height=350&width=400" alt="Event 1">
+                            <div class="exhibition-title">GAKU-HUB MEETUP Vol.1</div>
+                        </div>
+                    </div>
+                    <div class="exhibition-item fade-in">
+                        <div class="exhibition-image">
+                            <img src="/placeholder.svg?height=350&width=400" alt="Event 2">
+                            <div class="exhibition-title">学生×企業 共創ピッチ</div>
+                        </div>
+                    </div>
+                </div>
+                <div style="text-align: center;">
+                    <a href="#" class="view-all-btn">View All Events</a>
+                </div>
+            </div>
+
+            <div id="stories" class="tab-content">
+                <div class="exhibition-grid">
+                    <div class="exhibition-item fade-in">
+                        <div class="exhibition-image">
+                            <img src="/placeholder.svg?height=350&width=400" alt="Story 1">
+                            <div class="exhibition-title">「好き」が仕事に変わった日</div>
+                        </div>
+                    </div>
+                    <div class="exhibition-item fade-in">
+                        <div class="exhibition-image">
+                            <img src="/placeholder.svg?height=350&width=400" alt="Story 2">
+                            <div class="exhibition-title">100人の学生とつくる未来</div>
+                        </div>
+                    </div>
+                </div>
+                <div style="text-align: center;">
+                    <a href="#" class="view-all-btn">View All Stories</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ========================================
+         Members Section (The Curators)
+    ======================================== -->
+    <section class="members" id="members">
+        <h2 class="section-title">CURATORS</h2>
+
+        <div class="members-grid">
+            <div class="member-card fade-in">
+                <div class="member-image">
+                    <img src="/placeholder.svg?height=400&width=300" alt="Representative">
+                </div>
+                <div class="member-role">Representative</div>
+                <div class="member-name">代表</div>
+            </div>
+            <div class="member-card fade-in">
+                <div class="member-image">
+                    <img src="/placeholder.svg?height=400&width=300" alt="Agent">
+                </div>
+                <div class="member-role">Agent</div>
+                <div class="member-name">エージェント</div>
+            </div>
+            <div class="member-card fade-in">
+                <div class="member-image">
+                    <img src="/placeholder.svg?height=400&width=300" alt="Creator">
+                </div>
+                <div class="member-role">Creator</div>
+                <div class="member-name">クリエイター</div>
+            </div>
+        </div>
+
+        <div style="text-align: center;">
+            <a href="#" class="view-all-btn">View All Curators</a>
+        </div>
+
+    </section>
+
+    <!-- ========================================
+         Guidance Section (Entrance Choice)
+    ======================================== -->
+    <section class="guidance" id="contact">
+        <div class="guidance-container">
+            <div class="guidance-box">
+                <div class="guidance-content">
+                    <div class="guidance-label">FOR STUDENTS</div>
+                    <h3 class="guidance-title">物語を始めたい<br>学生へ</h3>
+                    <p class="guidance-desc">HP制作・コミュニティ参加</p>
+                </div>
+            </div>
+
+            <div class="guidance-box">
+                <div class="guidance-content">
+                    <div class="guidance-label">FOR MENTORS</div>
+                    <h3 class="guidance-title">知見を託したい<br>社会人へ</h3>
+                    <p class="guidance-desc">アライアンス・メンバーシップ</p>
+                </div>
+            </div>
+
+            <div class="guidance-box">
+                <div class="guidance-content">
+                    <div class="guidance-label">FOR COMPANIES</div>
+                    <h3 class="guidance-title">未来を共創したい<br>企業へ</h3>
+                    <p class="guidance-desc">HR支援・共創プロジェクト</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         Footer
+    ======================================== -->
+    <footer>
+        <div class="footer-logo">GAKU-HUB</div>
+        <div class="footer-sns">
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+            <a href="#">LinkedIn</a>
+        </div>
+        <div class="copyright">© GAKU-HUB</div>
+    </footer>
+
+    <!-- ========================================
+         JavaScript (スクロールアニメーション & スライドショー)
+    ======================================== -->
+    <script>
+        // スクロールアニメーション
+        const observerOptions = {
+            threshold: 0.2,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const fadeInObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in, .concept-line, .phase, .exhibition-item, .member-card').forEach(el => {
+            fadeInObserver.observe(el);
+        });
+
+        const slides = document.querySelectorAll('.hero-slide');
+        let currentSlide = 0;
+
+        function nextSlide() {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+
+        // 5秒ごとにスライド切り替え
+        setInterval(nextSlide, 5000);
+
+        // ========================================
+        // タブ切り替え機能
+        // ========================================
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // 1. すべてのボタンとコンテンツから active クラスを外す
+                tabBtns.forEach(b => b.classList.remove('active'));
+                tabContents.forEach(c => c.classList.remove('active'));
+
+                // 2. クリックされたボタンに active クラスをつける
+                btn.classList.add('active');
+
+                // 3. 対応するコンテンツを表示する
+                const targetId = btn.getAttribute('data-tab');
+                const targetContent = document.getElementById(targetId);
+                targetContent.classList.add('active');
+                
+                // 4. 切り替え時にスクロールアニメーションを再発火させるための処理（任意）
+                // 隠れていた要素が表示されたときにふわっとさせるため
+                targetContent.querySelectorAll('.fade-in').forEach(el => {
+                    el.classList.remove('visible'); // 一度消して
+                    setTimeout(() => el.classList.add('visible'), 50); // すぐ再付与
+                });
+            });
+        });
+
+        // ========================================
+        // ハンバーガーメニューの開閉機能
+        // ========================================
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        const navLinks = document.querySelectorAll('.nav-menu a');
+
+        // ハンバーガーボタンをクリックした時
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active'); // ボタンを×にする
+            navMenu.classList.toggle('active');   // メニューを右から出す
+        });
+
+        // メニュー内のリンクをクリックした時（メニューを閉じる）
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // ========================================
+        // ヘッダーのスクロール検知（背景色変更）
+        // ========================================
+        const header = document.querySelector('header');
+        
+        window.addEventListener('scroll', () => {
+            // スクロール量が50pxを超えたら 'scrolled' クラスを付与
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                // 戻ったら外す
+                header.classList.remove('scrolled');
+            }
+        });
+
+    </script>
+
+</body>
+</html>
