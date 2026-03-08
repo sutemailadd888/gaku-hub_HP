@@ -8,7 +8,7 @@ export default function Home() {
   const [scrolled, setScrolled] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  // 提供された画像パス（public/images/ に配置してください）
+  // 4枚の画像に変更
   const heroImages = [
     '/images/hero-image-1.jpg',
     '/images/hero-image-2.jpg',
@@ -16,7 +16,6 @@ export default function Home() {
     '/images/hero-image-4.jpg',
   ];
 
-  // スクロール検知
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
@@ -25,46 +24,24 @@ export default function Home() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // ヒーロー背景のスライドショー (5秒ごとに切り替え)
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % heroImages.length);
-    }, 5000);
+    }, 5000); // 5秒ごとに切り替え
     return () => clearInterval(timer);
   }, [heroImages.length]);
-
-  // スクロールアニメーション（Intersection Observer）
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('opacity-100', 'translate-y-0');
-            entry.target.classList.remove('opacity-0', 'translate-y-10');
-          }
-        });
-      },
-      { threshold: 0.2, rootMargin: '0px 0px -50px 0px' }
-    );
-
-    document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
-  }, []);
 
   return (
     <div className="font-sans bg-[#FAFAFA] text-[#111111] overflow-x-hidden selection:bg-[#141d58] selection:text-white">
       {/* ========================================
-          Header / Navigation
-          【修正点】
-          1. py-[1.2rem] md:py-6 とし、スマホ/PCそれぞれの高さをスクロール時も不変に。
-          2. すりガラス効果 (backdrop-blur-md) をPC/スマホ共通で適用。
+          Header / Navigation (完全再現版)
       ======================================== */}
       <header
-        className={`fixed top-0 left-0 w-full px-[5%] transition-all duration-300 ${
+        className={`fixed top-0 left-0 w-full px-[5%] flex justify-between items-center z-50 transition-all duration-300 ${
           scrolled || isMenuOpen
-            ? 'bg-[#FAFAFA]/85 backdrop-blur-md shadow-sm'
-            : 'bg-transparent'
-        } py-[1.2rem] md:py-6 z-50`} 
+            ? 'py-[1.2rem] md:py-[1.5rem] bg-[#FAFAFA]/85 backdrop-blur-[12px] shadow-[0_4px_20px_rgba(0,0,0,0.05)]'
+            : 'py-[1.2rem] md:py-[1.5rem] bg-transparent'
+        }`}
       >
         <div className="font-serif text-2xl tracking-[0.2em] font-light z-50">
           GAKU-HUB
@@ -80,30 +57,34 @@ export default function Home() {
           <span className={`block w-full h-[1px] bg-[#111111] absolute transition-all duration-400 ${isMenuOpen ? 'bottom-1/2 translate-y-1/2 -rotate-45' : 'bottom-0'}`}></span>
         </div>
 
-        {/* PC & Mobile ナビゲーション */}
         <nav
           className={`fixed md:relative top-0 right-0 w-full md:w-auto h-screen md:h-auto bg-[#FAFAFA] md:bg-transparent flex flex-col md:flex-row justify-center md:justify-end items-center transition-all duration-500 z-40 ${
             isMenuOpen ? 'translate-x-0' : 'translate-x-full md:translate-x-0'
           }`}
         >
-          <ul className="flex flex-col md:flex-row gap-8 md:gap-10 text-center">
-            <li><a href="#concept" onClick={() => setIsMenuOpen(false)} className="text-sm tracking-[0.1em] hover:text-[#141d58] transition-colors relative group">Concept<span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-[#141d58] transition-all duration-300 group-hover:w-full"></span></a></li>
-            <li><a href="#value" onClick={() => setIsMenuOpen(false)} className="text-sm tracking-[0.1em] hover:text-[#141d58] transition-colors relative group">Value<span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-[#141d58] transition-all duration-300 group-hover:w-full"></span></a></li>
-            <li><a href="#service" onClick={() => setIsMenuOpen(false)} className="text-sm tracking-[0.1em] hover:text-[#141d58] transition-colors relative group">Service<span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-[#141d58] transition-all duration-300 group-hover:w-full"></span></a></li>
-            <li><a href="#program" onClick={() => setIsMenuOpen(false)} className="text-sm tracking-[0.1em] hover:text-[#141d58] transition-colors relative group">Program<span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-[#141d58] transition-all duration-300 group-hover:w-full"></span></a></li>
-            <li><a href="#contact" onClick={() => setIsMenuOpen(false)} className="border border-[#141d58] px-6 py-2 text-sm tracking-[0.1em] hover:bg-[#141d58] hover:text-white transition-all duration-300">Contact</a></li>
+          <ul className="flex flex-col md:flex-row gap-12 md:gap-[2.5rem] text-center items-center">
+            {/* オリジナルの 0.9rem, letter-spacing: 0.1em に統一 */}
+            {['Concept', 'Service', 'Exhibition', 'Members'].map((item) => (
+              <li key={item}>
+                <a href={`#${item.toLowerCase()}`} onClick={() => setIsMenuOpen(false)} className="text-[0.9rem] tracking-[0.1em] text-[#111111] relative group transition-all duration-[0.6s]">
+                  {item}
+                  <span className="absolute -bottom-[5px] left-0 w-0 h-[1px] bg-[#141d58] transition-all duration-400 group-hover:w-full"></span>
+                </a>
+              </li>
+            ))}
+            <li>
+              <a href="#contact" onClick={() => setIsMenuOpen(false)} className="border border-[#141d58] px-[1.5rem] py-[0.6rem] text-[0.9rem] tracking-[0.1em] text-[#111111] hover:bg-[#141d58] hover:text-white hover:-translate-y-[2px] hover:shadow-[0_4px_10px_rgba(23,28,97,0.2)] transition-all duration-300 inline-block">
+                Contact
+              </a>
+            </li>
           </ul>
         </nav>
       </header>
 
       {/* ========================================
-          Hero Section
-          【修正点】
-          1. 背景画像をグレースケール(grayscale)＋明るさ80%(brightness-80)に。
-          2. アニメーションを duration-[2000ms] ease-in-out で静かなクロスフェードに。
-          3. キャッチコピーの出現遅延を delay-1000 に調整。
+          Hero Section (完全再現版)
       ======================================== */}
-      <section className="relative min-h-[100dvh] flex justify-center items-center overflow-hidden px-[5%]">
+      <section className="relative min-h-[100dvh] flex justify-center items-center overflow-hidden">
         {/* 背景画像スライダー */}
         <div className="absolute inset-0 z-0">
           {heroImages.map((src, index) => (
@@ -111,34 +92,45 @@ export default function Home() {
               key={index}
               className={`absolute inset-0 transition-opacity duration-[2000ms] ease-in-out ${currentSlide === index ? 'opacity-100' : 'opacity-0'}`}
             >
-              <div className="w-full h-full relative">
-                 <Image
-                  src={src}
-                  alt={`GAKU-HUB Vision ${index + 1}`}
-                  fill
-                  priority={index === 0} // 最初の画像だけ優先ロード
-                  style={{ objectFit: 'cover' }}
-                  className="grayscale brightness-80" // グレースケールと明るさ80%
-                 />
-              </div>
+              <Image
+                src={src}
+                alt={`GAKU-HUB Vision ${index + 1}`}
+                fill
+                priority={index === 0}
+                style={{ objectFit: 'cover' }}
+                className="grayscale brightness-[0.8]"
+              />
             </div>
           ))}
         </div>
 
-        {/* 透過白スモークオーバーレイ */}
+        {/* 透過白スモークオーバーレイ (rgba(250, 250, 250, 0.6)) */}
         <div className="absolute inset-0 bg-[#FAFAFA]/60 z-10"></div>
-        <div className="absolute top-0 left-0 w-full h-[150px] bg-gradient-to-b from-[#FAFAFA]/90 to-transparent z-20 pointer-events-none"></div>
+        
+        {/* 上部のグラデーションスモーク (PC: 150px, SP: 140px) */}
+        <div className="absolute top-0 left-0 w-full h-[140px] md:h-[150px] bg-gradient-to-b from-[#FAFAFA]/90 to-transparent z-20 pointer-events-none"></div>
 
-        {/* キャッチコピー */}
-        <div className="relative z-30 text-center fade-in opacity-0 translate-y-10 transition-all duration-1000 delay-1000">
-          <h1 className="font-serif text-3xl md:text-5xl leading-relaxed mb-6 tracking-[0.1em]">
+        {/* 中央のキャッチコピー (1秒遅れで1.5秒かけて出現するアニメーションをTailwindで再現) */}
+        <div className="relative z-30 text-center px-12 animate-[heroTextFade_1.5s_ease_1s_forwards] opacity-0 translate-y-[30px]">
+          {/* clamp を使用して画面幅に合わせて文字サイズを可変に + text-shadow で発光 */}
+          <h1 className="font-serif text-[clamp(2rem,6vw,4.5rem)] leading-[1.6] mb-8 [text-shadow:0_2px_20px_rgba(255,255,255,0.8)]">
             想いが、カタチに。<br />
             出会いが、ミライに。
           </h1>
-          <p className="font-serif text-[#444] text-lg md:text-xl tracking-[0.15em]">
+          <p className="font-serif text-[#444] text-[clamp(0.9rem,2.5vw,1.4rem)] tracking-[0.15em] [text-shadow:0_1px_10px_rgba(255,255,255,0.8)]">
             Link up your story, Link up your future.
           </p>
         </div>
+        
+        {/* tailwind.config.ts に書かずに、インラインで keyframes を定義して適用するための記述 */}
+        <style jsx>{`
+          @keyframes heroTextFade {
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+        `}</style>
       </section>
 
       {/* ========================================
