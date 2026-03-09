@@ -5,7 +5,6 @@ export default function Program() {
     <section id="program" className="py-24 md:py-32 bg-white px-[5%]">
       <div className="max-w-6xl mx-auto">
         
-        {/* セクションタイトル */}
         <div className="text-center mb-16 fade-in opacity-0 translate-y-10 transition-all duration-700">
           <h2 className="font-['Didot','Garamond',serif] text-[2.5rem] tracking-[0.15em] mb-4 font-light text-[#111111]">PROGRAM</h2>
           <p className="font-['Didot','Garamond',serif] text-[#888] tracking-[0.1em] text-[1rem]">Join the Co-creation</p>
@@ -15,13 +14,8 @@ export default function Program() {
           </p>
         </div>
 
-        {/* --- 学生・チャレンジャー向けエリア --- */}
-        <div className="mt-16 mb-8 text-center fade-in opacity-0 translate-y-10 transition-all duration-700 delay-100">
-          <span className="font-['Didot','Garamond',serif] text-[0.8rem] tracking-[0.2em] text-[#141d58] uppercase">For Students & Challengers</span>
-        </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 fade-in opacity-0 translate-y-10 transition-all duration-700 delay-200">
-          {/* ルートA：直轄モデル */}
+          {/* ルートA */}
           <div className="bg-[#FAFAFA] border border-[#e0e0e0] p-8 md:p-12 hover:border-[#141d58] hover:shadow-[0_8px_30px_rgba(20,29,88,0.05)] transition-all duration-500 group relative">
             <div className="relative z-10">
               <span className="font-['Didot','Garamond',serif] text-[#888] group-hover:text-[#141d58] transition-colors duration-500 text-[0.75rem] tracking-[0.2em] block mb-4 uppercase">Route A : Direct</span>
@@ -35,7 +29,7 @@ export default function Program() {
             </div>
           </div>
 
-          {/* ルートB：オフィシャルパートナー枠 */}
+          {/* ルートB */}
           <div className="bg-[#FAFAFA] border border-[#e0e0e0] p-8 md:p-12 hover:border-[#141d58] hover:shadow-[0_8px_30px_rgba(20,29,88,0.05)] transition-all duration-500 group relative">
             <div className="relative z-10">
               <span className="font-['Didot','Garamond',serif] text-[#888] group-hover:text-[#141d58] transition-colors duration-500 text-[0.75rem] tracking-[0.2em] block mb-4 uppercase">Route B : Partner</span>
@@ -50,24 +44,14 @@ export default function Program() {
           </div>
         </div>
 
-        {/* --- 法人・BtoB向けエリア --- */}
-        <div className="mt-20 md:mt-28 border-t border-[#eee] pt-16 text-center fade-in opacity-0 translate-y-10 transition-all duration-700 delay-300">
-           <span className="font-['Didot','Garamond',serif] text-[0.8rem] tracking-[0.2em] text-[#141d58] uppercase block mb-4">For Companies & Organizations</span>
-           <h3 className="font-['Yu_Mincho','游明朝',serif] text-[1.4rem] tracking-[0.1em] mb-4 font-normal text-[#111111]">法人・共創施設・学生団体の方へ</h3>
-           <p className="text-[0.95rem] text-[#555] leading-[1.9] max-w-2xl mx-auto">
-             御社の施設での「共創実績の創出（PMO）」から、行動力ある次世代人材への「ダイレクトな採用PR（イベントスポンサー枠）」まで、幅広く協業を承ります。<br />
-             公式パートナー提携に関するご相談もお待ちしております。
-           </p>
-        </div>
-
-        {/* --- 共通のContactボタン --- */}
-        <div className="text-center mt-12 md:mt-16 fade-in opacity-0 translate-y-10 transition-all duration-700 delay-400">
-          <Link 
-            href="/contact" 
-            className="inline-block border border-[#111111] px-[4rem] py-[1.2rem] text-[0.95rem] tracking-[0.15em] text-[#111111] font-['Didot','Garamond',serif] hover:bg-[#141d58] hover:border-[#141d58] hover:text-white transition-all duration-500 uppercase"
-          >
-            Contact Us
-          </Link>
+        {/* ▼ 追加：View Program Details ボタン */}
+        <div className="text-center mt-20 md:mt-28 fade-in opacity-0 translate-y-10 transition-all duration-700 delay-300">
+           <Link 
+             href="/program" 
+             className="inline-block border border-[#111111] px-[3rem] py-[1rem] text-[0.9rem] tracking-[0.1em] text-[#111111] font-['Didot','Garamond',serif] hover:bg-[#141d58] hover:border-[#141d58] hover:text-white transition-all duration-500"
+           >
+              View Program Details
+           </Link>
         </div>
 
       </div>

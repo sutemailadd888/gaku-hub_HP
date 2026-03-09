@@ -7,10 +7,10 @@ import Service from '../components/Service';
 import Collection from '../components/Collection';
 import Curators from '../components/Curators';
 import Program from '../components/Program';
+import Contact from '../components/Contact'; // 追加
 import Footer from '../components/Footer';
 
 export default function Home() {
-  // スクロールアニメーションの監視（全コンポーネントの .fade-in を対象）
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -36,6 +36,7 @@ export default function Home() {
       <Collection />
       <Curators />
       <Program />
+      <Contact /> {/* 追加 */}
       <Footer />
     </div>
   );
