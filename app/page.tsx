@@ -3,7 +3,6 @@ import { useEffect } from 'react';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
 import Concept from '../components/Concept';
-import Value from '../components/Value';
 import Service from '../components/Service';
 import Collection from '../components/Collection';
 import Curators from '../components/Curators';
@@ -33,7 +32,6 @@ export default function Home() {
       <Header />
       <Hero />
       <Concept />
-      <Value />
       <Service />
       <Collection />
       <Curators />
