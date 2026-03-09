@@ -230,14 +230,14 @@ export default function Home() {
 
             <div className="hidden md:block w-[1px] bg-[rgba(17,17,17,0.1)] mt-12 mb-4"></div>
 
-            {/* BtoB PMO & CONSULTING */}
+            {/* PARTNERSHIP (BtoB & HR) */}
             <div className="flex-1 text-center fade-in opacity-0 translate-y-10 transition-all duration-700 delay-300">
               <div className="font-['Didot','Garamond',serif] text-[#141d58] text-[1.2rem] tracking-[0.1em] mb-4">03</div>
-              <h3 className="font-['Didot','Garamond',serif] text-[1.5rem] tracking-[0.1em] mb-2">CONSULTING</h3>
-              <p className="font-['Yu_Mincho','游明朝',serif] text-[0.9rem] text-[#888] tracking-[0.1em] mb-6">法人向け・外部PMO実行支援</p>
+              <h3 className="font-['Didot','Garamond',serif] text-[1.5rem] tracking-[0.1em] mb-2">PARTNERSHIP</h3>
+              <p className="font-['Yu_Mincho','游明朝',serif] text-[0.9rem] text-[#888] tracking-[0.1em] mb-6">法人向け共創・採用支援</p>
               <p className="text-[0.95rem] leading-[1.9] text-[#555] text-left md:text-center">
-                「場はあるが実績が生まれない」施設等の課題を解決。外部PMOとして入り込み、共創事例の創出と確実なマッチングを実現します。<br />
-                <span className="block mt-4 text-[0.85rem] text-[#888]">対象：共創施設・オープンイノベーション推進企業</span>
+                共創施設へのPMO（実行支援）から、熱量ある優秀な学生へのダイレクトリクルーティング（協賛・採用支援）まで。法人の課題に合わせて伴走します。<br />
+                <span className="block mt-4 text-[0.85rem] text-[#888]">対象：オープンイノベーション推進企業・人事採用部門</span>
               </p>
             </div>
           </div>
@@ -245,7 +245,7 @@ export default function Home() {
       </section>
 
       {/* ========================================
-          Program Section (Dual Funnel)
+          Program Section (Dual Funnel & Corporate)
       ======================================== */}
       <section id="program" className="py-32 bg-[#111111] text-white px-[5%]">
         <div className="max-w-6xl mx-auto">
@@ -272,23 +272,27 @@ export default function Home() {
               </div>
             </div>
 
-            {/* ルートB：提携先モデル */}
+            {/* ルートB：オフィシャルパートナー枠 */}
             <div className="border border-[#141d58] p-8 md:p-12 hover:bg-[#141d58]/20 transition-colors group relative overflow-hidden fade-in opacity-0 translate-y-10 transition-all duration-700 delay-200">
               <div className="relative z-10">
                 <span className="font-['Didot','Garamond',serif] text-[#8ba3d4] text-[0.8rem] tracking-[0.2em] block mb-4">ROUTE B : PARTNER</span>
-                <h3 className="font-['Yu_Mincho','游明朝',serif] text-[1.6rem] tracking-[0.1em] mb-4 font-normal leading-snug">提携コミュニティ<br />推薦枠（ノーリスク）</h3>
+                <h3 className="font-['Yu_Mincho','游明朝',serif] text-[1.6rem] tracking-[0.1em] mb-4 font-normal leading-snug">オフィシャルパートナー<br />推薦枠（ノーリスク）</h3>
                 <p className="text-[0.95rem] text-gray-300 mb-6 leading-[1.9]">
-                  共創EXPOなどの提携コミュニティメンバー限定。提携先が費用を負担するため、完全ノーリスクでGAKU-HUBの伴走支援が受けられます。
+                  GAKU-HUBと提携するコミュニティ・学生団体のメンバー限定。提携先が費用を負担・補助するため、ノーリスクで伴走支援が受けられます。
                 </p>
-                <div className="text-[0.8rem] text-gray-400 border-t border-white/10 pt-4">対象: 提携先コミュニティ（共創EXPO等）の所属メンバー</div>
+                <div className="text-[0.8rem] text-gray-400 border-t border-white/10 pt-4">対象: 提携先コミュニティの所属メンバー（※現在の提携先はお問い合わせください）</div>
               </div>
             </div>
           </div>
 
+          {/* 法人向けコンタクト（HR・PMO統合） */}
           <div id="contact" className="mt-8 border border-white/10 p-8 text-center hover:bg-white/5 transition-colors fade-in opacity-0 translate-y-10 transition-all duration-700 delay-300 cursor-pointer">
-             <span className="font-['Didot','Garamond',serif] text-[#aaa] text-[0.8rem] tracking-[0.2em] block mb-2">FOR COMPANIES & FACILITIES</span>
-             <h3 className="font-['Yu_Mincho','游明朝',serif] text-[1.4rem] tracking-[0.1em] mb-2 font-normal">法人・共創施設の方へ</h3>
-             <p className="text-[0.95rem] text-gray-400">御社の施設に、確実な共創実績を生み出す「外部PMO」を導入しませんか？</p>
+             <span className="font-['Didot','Garamond',serif] text-[#aaa] text-[0.8rem] tracking-[0.2em] block mb-2">FOR COMPANIES, FACILITIES & ORGANIZATIONS</span>
+             <h3 className="font-['Yu_Mincho','游明朝',serif] text-[1.4rem] tracking-[0.1em] mb-2 font-normal">法人・共創施設・学生団体の方へ</h3>
+             <p className="text-[0.95rem] text-gray-400 leading-[1.8] mt-4">
+               御社の施設での「共創実績の創出（PMO）」から、行動力ある次世代人材への「ダイレクトな採用PR（イベントスポンサー枠）」まで、幅広く協業を承ります。<br />
+               公式パートナー提携に関するご相談もお待ちしております。
+             </p>
           </div>
         </div>
       </section>
