@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,6 +12,15 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // ▼ ページ内スクロール(id)ではなく、下層ページへのパス(path)に変更
+  const navItems = [
+    { name: 'Philosophy', path: '/philosophy' },
+    { name: 'Service', path: '/service' },
+    { name: 'Collection', path: '/collection' },
+    { name: 'Curators', path: '/curators' },
+    { name: 'Program', path: '/program' }
+  ];
+
   return (
     <header
       className={`fixed top-0 left-0 w-full px-[5%] flex justify-between items-center z-50 transition-all duration-300 ${
@@ -19,8 +29,11 @@ export default function Header() {
           : 'py-[1.2rem] md:py-[1.5rem] bg-transparent'
       }`}
     >
+      {/* ロゴ：クリックでトップページ(/)へ戻る */}
       <div className="font-['Didot','Yu_Mincho',serif] text-[1.5rem] tracking-[0.2em] font-light z-50">
-        GAKU-HUB
+        <Link href="/" onClick={() => setIsMenuOpen(false)}>
+          GAKU-HUB
+        </Link>
       </div>
 
       <div className="md:hidden w-[30px] h-[20px] relative z-50 cursor-pointer" onClick={() => setIsMenuOpen(!isMenuOpen)}>
@@ -31,18 +44,28 @@ export default function Header() {
 
       <nav className={`fixed md:relative top-0 right-0 w-full md:w-auto h-screen md:h-auto bg-[#FAFAFA] md:bg-transparent flex flex-col md:flex-row justify-center md:justify-end items-center transition-all duration-500 z-40 ${isMenuOpen ? 'translate-x-0' : 'translate-x-full md:translate-x-0'}`}>
         <ul className="flex flex-col md:flex-row gap-10 md:gap-[2.5rem] text-center items-center">
-          {['Concept', 'Service', 'Collection', 'Program'].map((item) => (
-            <li key={item}>
-              <a href={`#${item.toLowerCase()}`} onClick={() => setIsMenuOpen(false)} className="text-[0.9rem] tracking-[0.1em] text-[#111111] relative group transition-all duration-[0.6s]">
-                {item}
+          {navItems.map((item) => (
+            <li key={item.name}>
+              {/* ▼ <a>タグをNext.jsの<Link>に変更し、hrefをpathに */}
+              <Link 
+                href={item.path} 
+                onClick={() => setIsMenuOpen(false)} 
+                className="font-['Didot','Garamond',serif] text-[0.9rem] tracking-[0.1em] text-[#111111] relative group transition-all duration-[0.6s]"
+              >
+                {item.name}
                 <span className="absolute -bottom-[5px] left-0 w-0 h-[1px] bg-[#141d58] transition-all duration-400 group-hover:w-full"></span>
-              </a>
+              </Link>
             </li>
           ))}
           <li>
-            <a href="#contact" onClick={() => setIsMenuOpen(false)} className="border border-[#141d58] px-[1.5rem] py-[0.6rem] text-[0.9rem] tracking-[0.1em] text-[#111111] hover:bg-[#141d58] hover:text-white hover:-translate-y-[2px] hover:shadow-[0_4px_10px_rgba(23,28,97,0.2)] transition-all duration-300 inline-block">
+            {/* ▼ Contactも下層ページ(/contact)へ直接飛ぶように変更 */}
+            <Link 
+              href="/contact" 
+              onClick={() => setIsMenuOpen(false)} 
+              className="border border-[#111111] px-[1.5rem] py-[0.6rem] text-[0.85rem] tracking-[0.1em] text-[#111111] font-['Didot','Garamond',serif] hover:bg-[#141d58] hover:border-[#141d58] hover:text-white transition-all duration-500 uppercase inline-block"
+            >
               Contact
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>
