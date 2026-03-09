@@ -4,10 +4,10 @@ export default function Curators() {
   // 事業の3フェーズ（統括・企画・接続）を担うコアメンバーの定義
   const teamData = [
     { 
-      role: 'Founder & CEO', 
+      role: 'Founder & Producer', 
       name: '久保', 
       businessFunction: '事業統括 / BtoBアライアンス',
-      img: 'https://placehold.co/400x600/eeeeee/999999?text=Founder' 
+      img: '/images/Naoki_Kubo.jpg' // ▼ここを実際の画像パスに変更しました
     },
     { 
       role: 'Director', 
@@ -58,7 +58,7 @@ export default function Curators() {
                 {member.name}
               </div>
               
-              {/* ▼追加：担当領域（ビジネス機能）を小さく美しく配置 */}
+              {/* 担当領域（ビジネス機能） */}
               <div className="font-['Yu_Mincho','游明朝',serif] text-[0.75rem] tracking-[0.05em] text-[#888]">
                 {member.businessFunction}
               </div>
