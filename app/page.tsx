@@ -1,12 +1,14 @@
 "use client";
 import { useEffect } from 'react';
-import Header from '@/components/Header';
-import Hero from '@/components/Hero';
-import Concept from '@/components/Concept';
-import Service from '@/components/Service';
-import Collection from '@/components/Collection';
-import Program from '@/components/Program';
-import Footer from '@/components/Footer';
+import Header from '../components/Header';
+import Hero from '../components/Hero';
+import Concept from '../components/Concept';
+import Value from '../components/Value';
+import Service from '../components/Service';
+import Collection from '../components/Collection';
+import Curators from '../components/Curators';
+import Program from '../components/Program';
+import Footer from '../components/Footer';
 
 export default function Home() {
   // スクロールアニメーションの監視（全コンポーネントの .fade-in を対象）
@@ -31,8 +33,10 @@ export default function Home() {
       <Header />
       <Hero />
       <Concept />
+      <Value />
       <Service />
       <Collection />
+      <Curators />
       <Program />
       <Footer />
     </div>
