@@ -4,13 +4,13 @@ export default function Concept() {
   return (
     <section id="concept" className="py-24 md:py-40 px-[5%] flex flex-col items-center min-h-[80vh] justify-center">
       
-      {/* ▼ 修正点1：全体のgapを狭くしつつ、タイトルと文章の間にだけ特別な余白を作る
-        md:gap-12 にして説明文同士の距離を縮め、カタマリ感を出しています。
+      {/* 余計なマージンをなくし、全体が完璧に中央（center）に配置されるように修正しました。
+        gap-12 でタイトルと文章、文章同士の距離を均等に美しく保ちます。
       */}
-      <div className="md:[writing-mode:vertical-rl] flex flex-col md:flex-row gap-10 md:gap-12 items-center md:items-start text-center md:text-left">
+      <div className="md:[writing-mode:vertical-rl] flex flex-col md:flex-row gap-10 md:gap-12 items-center md:items-center text-center md:text-left">
         
-        {/* タイトル（この後に md:mr-12 を入れて、タイトルと文章の間だけ少し広く離す） */}
-        <div className="fade-in opacity-0 translate-y-10 transition-all duration-700 md:mr-12">
+        {/* タイトル（md:mr-12 を削除し、ズレを解消） */}
+        <div className="fade-in opacity-0 translate-y-10 transition-all duration-700">
           <h2 className="font-['Yu_Mincho','游明朝','Hiragino_Mincho_ProN',serif] text-[1.6rem] md:text-[2.5rem] leading-[2.2] tracking-[0.1em] font-normal md:[text-orientation:upright]">
             溢れる『学』が、<br />誰かの『力』になる。
           </h2>
@@ -31,10 +31,7 @@ export default function Concept() {
         </div>
       </div>
 
-      {/* ▼ 修正点2：ボタンのデザインと余白
-        mt-20 md:mt-28 でたっぷりと静寂（余白）を確保。
-        hover:bg-[#141d58] hover:border-[#141d58] に変更し、触れるとネイビーに染まるように。
-      */}
+      {/* View Philosophy ボタン */}
       <div className="mt-20 md:mt-28 fade-in opacity-0 translate-y-10 transition-all duration-700 delay-500">
         <Link 
           href="/philosophy" 
