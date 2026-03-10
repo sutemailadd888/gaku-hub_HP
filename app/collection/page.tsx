@@ -1,95 +1,161 @@
 "use client";
-import { useState } from 'react';
+import Link from 'next/link';
 
-export default function CollectionHub() {
-  const [activeFilter, setActiveFilter] = useState('all');
+// ※ 実際の運用ではヘッドレスCMS（MicroCMSなど）から取得するデータを想定したダミー配列
+const collectionData = [
+  {
+    id: "01",
+    title: "Blooming Beauty Project",
+    category: "01. INCUBATION",
+    type: "Community Launch",
+    description: "「美容」を切り口に、学生と若手社会人がフラットに交流し、自分らしい表現を探求するコミュニティの立ち上げ。",
+    image: "https://placehold.co/800x600/eeeeee/999999?text=Beauty+Project",
+    date: "2026.02",
+    partner: "Blooming Camp",
+    sponsor: "None"
+  },
+  {
+    id: "02",
+    title: "Career Break Workshop at Bar",
+    category: "02. EVENT",
+    type: "Talk Session & Workshop",
+    description: "不登校やキャリアブレイク経験者を対象とした、Bar空間での対話型ワークショップ。多様な生き方の選択肢を提示。",
+    image: "https://placehold.co/800x600/eeeeee/999999?text=Career+Workshop",
+    date: "2026.03",
+    partner: "None",
+    sponsor: "〇〇NPO法人"
+  },
+  {
+    id: "03",
+    title: "Regional Co-Creation EXPO",
+    category: "03. PMO",
+    type: "Event Execution",
+    description: "地方創生をテーマに、学生の熱量と地元企業の課題をマッチングさせる大型共創イベントの企画・運営代行。",
+    image: "https://placehold.co/800x600/eeeeee/999999?text=Co-Creation+EXPO",
+    date: "2025.11",
+    partner: "共創EXPO実行委員会",
+    sponsor: "株式会社〇〇 他3社"
+  },
+  {
+    id: "04",
+    title: "Sake Brand 'Hagakure' Launch",
+    category: "01. INCUBATION",
+    type: "Product Development",
+    description: "学生による日本酒ブランド「葉隠」の立ち上げ支援。コンセプト設計からWeb制作、飲食店でのポップアップまで伴走。",
+    image: "https://placehold.co/800x600/eeeeee/999999?text=Hagakure+Sake",
+    date: "2026.01",
+    partner: "Blooming Kitchen",
+    sponsor: "None"
+  }
+];
 
-  // ギャラリーに展示する全データ（カテゴリー分けを持たせています）
-  const collectionItems = [
-    { id: 1, category: 'projects', title: '日本酒バー『葉隠』立ち上げ・ブランディング', img: 'https://placehold.co/800x800/eeeeee/999999?text=Project+01' },
-    { id: 2, category: 'projects', title: 'カフェバー Blooming Kitchen 共創メニュー開発', img: 'https://placehold.co/800x800/eeeeee/999999?text=Project+02' },
-    { id: 3, category: 'events', title: '次世代リーダーが集う MEETUP Vol.1', img: 'https://placehold.co/800x800/eeeeee/999999?text=Event+01' },
-    { id: 4, category: 'events', title: '企業×学生 新規事業ピッチコンテスト', img: 'https://placehold.co/800x800/eeeeee/999999?text=Event+02' },
-    { id: 5, category: 'stories', title: '【HR事例】熱量フィルターが採用を変える', img: 'https://placehold.co/800x800/eeeeee/999999?text=Story+01' },
-    { id: 6, category: 'stories', title: '「好き」をカタチにするまでの100日間の軌跡', img: 'https://placehold.co/800x800/eeeeee/999999?text=Story+02' },
-    // ギャラリーを充実させるための追加ダミー
-    { id: 7, category: 'projects', title: 'アパレルブランド ポップアップストア出店', img: 'https://placehold.co/800x800/eeeeee/999999?text=Project+03' },
-    { id: 8, category: 'events', title: 'GAKU-HUB カンファレンス 2026', img: 'https://placehold.co/800x800/eeeeee/999999?text=Event+03' },
-    { id: 9, category: 'stories', title: '【対談】共創施設PMOがもたらす化学反応', img: 'https://placehold.co/800x800/eeeeee/999999?text=Story+03' },
-  ];
-
-  // フィルターの定義
-  const filters = [
-    { id: 'all', label: 'All' },
-    { id: 'projects', label: 'Projects' },
-    { id: 'events', label: 'Events' },
-    { id: 'stories', label: 'Stories' }
-  ];
-
-  // 選択されたタブに基づいて表示するデータを絞り込む
-  const filteredItems = activeFilter === 'all' 
-    ? collectionItems 
-    : collectionItems.filter(item => item.category === activeFilter);
-
+export default function Collection() {
   return (
-    <div className="min-h-screen bg-white pt-32 pb-24 px-[5%] selection:bg-[#141d58] selection:text-white">
-      <div className="max-w-7xl mx-auto">
+    <div className="min-h-screen bg-[#FAFAFA] pt-32 pb-24 px-[5%] selection:bg-[#141d58] selection:text-white">
+      <div className="max-w-6xl mx-auto">
         
-        {/* タイトルエリア */}
-        <div className="text-center mb-16 animate-[fadeIn_1s_ease_forwards]">
+        {/* =========================================
+            1. ページタイトル
+        ========================================= */}
+        <div className="text-center mb-24 animate-[fadeIn_1s_ease_forwards]">
           <h1 className="font-['Didot','Garamond',serif] text-[3rem] md:text-[4rem] tracking-[0.15em] mb-4 text-[#111111] font-light">
             COLLECTION
           </h1>
           <p className="font-['Didot','Garamond',serif] text-[#888] tracking-[0.2em] text-[0.85rem] uppercase">
-            Works & Stories
+            Our Co-Creation Portfolio
           </p>
         </div>
 
-        {/* フィルター（絞り込みタブ） */}
-        <div className="flex flex-wrap justify-center gap-6 md:gap-12 mb-16 animate-[fadeIn_1s_ease_forwards_0.2s] opacity-0" style={{ animationFillMode: 'forwards' }}>
-          {filters.map((filter) => (
-            <button
-              key={filter.id}
-              onClick={() => setActiveFilter(filter.id)}
-              className={`pb-2 border-b transition-all duration-300 font-['Didot','Garamond',serif] tracking-[0.15em] text-[0.95rem] md:text-[1.1rem] uppercase ${
-                activeFilter === filter.id 
-                  ? 'border-[#141d58] text-[#141d58]' 
-                  : 'border-transparent text-[#aaa] hover:text-[#111111]'
-              }`}
+        {/* =========================================
+            2. 導入文
+        ========================================= */}
+        <div className="text-center mb-24 animate-[fadeIn_1s_ease_forwards_0.2s] opacity-0" style={{ animationFillMode: 'forwards' }}>
+          <p className="font-['Yu_Mincho','游明朝',serif] text-[1.05rem] md:text-[1.15rem] tracking-[0.1em] text-[#555] leading-relaxed mb-8 max-w-3xl mx-auto">
+            個人の熱量が社会実装（カタチ）となり、<br className="hidden md:block" />
+            多様な企業やコミュニティとの結節点から生まれた「共創の実績」です。<br />
+            GAKU-HUBが関わったプロジェクトの軌跡をご覧ください。
+          </p>
+          <div className="w-[1px] h-12 bg-[#141d58] mx-auto"></div>
+        </div>
+
+        {/* =========================================
+            3. プロジェクト一覧 (Grid Layout)
+        ========================================= */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-20 mb-32">
+          {collectionData.map((item, index) => (
+            <Link 
+              href={`/collection/${item.id}`} // ※詳細ページへのリンク（今回は一覧のみ実装）
+              key={item.id}
+              className="group block animate-[fadeIn_1s_ease_forwards] opacity-0"
+              style={{ animationDelay: `${0.3 + index * 0.1}s`, animationFillMode: 'forwards' }}
             >
-              {filter.label}
-            </button>
+              {/* Thumbnail Image */}
+              <div className="overflow-hidden mb-6 relative aspect-[4/3] bg-white shadow-sm">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img 
+                  src={item.image} 
+                  alt={item.title} 
+                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 ease-[cubic-bezier(0.4,0,0.2,1)]" 
+                />
+                
+                {/* Hover Text Overlay (Optional: 美しさを優先して控えめに) */}
+                <div className="absolute inset-0 bg-[#111111]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                  <span className="font-['Didot','Garamond',serif] text-white tracking-[0.2em] text-[0.8rem] uppercase border border-white px-6 py-2 backdrop-blur-sm">View Project</span>
+                </div>
+              </div>
+
+              {/* Project Meta Info */}
+              <div className="flex justify-between items-baseline mb-3 border-b border-[#eee] pb-3">
+                <span className="font-['Didot','Garamond',serif] text-[0.75rem] text-[#141d58] tracking-[0.15em] font-bold">{item.category}</span>
+                <span className="font-['Didot','Garamond',serif] text-[0.7rem] text-[#888] tracking-[0.1em]">{item.date}</span>
+              </div>
+
+              {/* Title & Description */}
+              <h2 className="font-['Didot','Garamond',serif] text-[1.4rem] tracking-[0.08em] text-[#111111] mb-2 group-hover:text-[#141d58] transition-colors duration-300">
+                {item.title}
+              </h2>
+              <p className="font-['Yu_Mincho','游明朝',serif] text-[0.8rem] text-[#888] tracking-[0.05em] mb-4">
+                {item.type}
+              </p>
+              <p className="font-['Yu_Mincho','游明朝',serif] text-[0.9rem] text-[#555] leading-relaxed mb-6 line-clamp-2">
+                {item.description}
+              </p>
+
+              {/* Stakeholder Info (BtoB営業向けの最重要パーツ) */}
+              <div className="bg-[#fcfcfc] border border-[#eee] p-4 flex flex-col gap-2">
+                {item.partner !== "None" && (
+                  <div className="flex items-start gap-2">
+                    <span className="font-['Didot','Garamond',serif] text-[0.65rem] text-[#111111] uppercase tracking-[0.1em] w-16 shrink-0 mt-[2px]">Partner</span>
+                    <span className="font-['Yu_Mincho','游明朝',serif] text-[0.8rem] text-[#666]">{item.partner}</span>
+                  </div>
+                )}
+                {item.sponsor !== "None" && (
+                  <div className="flex items-start gap-2">
+                    <span className="font-['Didot','Garamond',serif] text-[0.65rem] text-[#111111] uppercase tracking-[0.1em] w-16 shrink-0 mt-[2px]">Sponsor</span>
+                    <span className="font-['Yu_Mincho','游明朝',serif] text-[0.8rem] text-[#666]">{item.sponsor}</span>
+                  </div>
+                )}
+                {item.partner === "None" && item.sponsor === "None" && (
+                  <div className="flex items-start gap-2">
+                    <span className="font-['Didot','Garamond',serif] text-[0.65rem] text-[#111111] uppercase tracking-[0.1em] w-16 shrink-0 mt-[2px]">Powered</span>
+                    <span className="font-['Yu_Mincho','游明朝',serif] text-[0.8rem] text-[#666]">GAKU-HUB Original</span>
+                  </div>
+                )}
+              </div>
+            </Link>
           ))}
         </div>
 
-        {/* ギャラリー（グリッド表示） */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 animate-[fadeIn_1s_ease_forwards_0.4s] opacity-0" style={{ animationFillMode: 'forwards' }}>
-          {filteredItems.map((item) => (
-            <div 
-              key={item.id} 
-              // 絞り込み時にフワッと切り替わるアニメーションキーを設定
-              className="group relative overflow-hidden cursor-pointer bg-white shadow-[0_2px_20px_rgba(0,0,0,0.04)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.12)] transition-all duration-[0.4s] animate-[fadeInTab_0.6s_ease_forwards]"
-            >
-              <div className="w-full aspect-square overflow-hidden bg-[#FAFAFA]">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img 
-                  src={item.img} 
-                  alt={item.title} 
-                  className="w-full h-full object-cover group-hover:scale-105 group-hover:grayscale-0 transition-transform duration-[0.8s] ease-[cubic-bezier(0.4,0,0.2,1)]"
-                />
-              </div>
-              
-              {/* 額縁演出：ホバーで下からせり上がる濃紺の帯 */}
-              <div className="absolute bottom-0 left-0 w-full bg-[rgba(23,28,97,0.95)] text-white p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-[0.4s] ease-[cubic-bezier(0.4,0,0.2,1)] flex flex-col justify-end">
-                <span className="font-['Didot','Garamond',serif] text-[0.65rem] tracking-[0.2em] text-[#aaa] mb-2 uppercase block">
-                  {item.category}
-                </span>
-                <div className="font-['Yu_Mincho','游明朝',serif] text-[1.05rem] tracking-[0.08em] leading-snug">
-                  {item.title}
-                </div>
-              </div>
-            </div>
-          ))}
+        {/* =========================================
+            4. ホームへ戻るボタン
+        ========================================= */}
+        <div className="text-center pb-12 animate-[fadeIn_1s_ease_forwards_1s] opacity-0" style={{ animationFillMode: 'forwards' }}>
+          <Link 
+            href="/" 
+            className="inline-block border border-[#111111] px-[3rem] py-[1rem] text-[0.85rem] tracking-[0.1em] text-[#111111] font-['Didot','Garamond',serif] hover:bg-[#141d58] hover:border-[#141d58] hover:text-white transition-all duration-500 uppercase"
+          >
+            Back to Home
+          </Link>
         </div>
 
       </div>
@@ -98,10 +164,6 @@ export default function CollectionHub() {
         @keyframes fadeIn {
           from { opacity: 0; transform: translateY(15px); }
           to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes fadeInTab {
-          from { opacity: 0; transform: translateY(10px) scale(0.98); }
-          to { opacity: 1; transform: translateY(0) scale(1); }
         }
       `}</style>
     </div>
