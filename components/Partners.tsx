@@ -1,10 +1,9 @@
-"use client";
 import Link from 'next/link';
 
 export default function Partners() {
   return (
-    {/* app/page.tsx の IntersectionObserver と連動させるため、fade-in クラスを追加 */}
     <section className="py-32 bg-white border-t border-[#eee] fade-in opacity-0 translate-y-10 transition-all duration-[1s] ease-out">
+      {/* ↓ コメントを section タグの内側に移動させました */}
       <div className="max-w-5xl mx-auto px-[5%]">
         
         {/* Section Title */}
