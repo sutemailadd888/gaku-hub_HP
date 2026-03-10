@@ -4,10 +4,11 @@ import Header from '../components/Header';
 import Hero from '../components/Hero';
 import Concept from '../components/Concept';
 import Service from '../components/Service';
+import Partners from '../components/Partners'; // ★ ここを追加
 import Collection from '../components/Collection';
 import Curators from '../components/Curators';
 import Program from '../components/Program';
-import Contact from '../components/Contact'; // 追加
+import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 
 export default function Home() {
@@ -33,10 +34,11 @@ export default function Home() {
       <Hero />
       <Concept />
       <Service />
+      <Partners /> {/* ★ ここに挿入（ServiceとCollectionの間） */}
       <Collection />
       <Curators />
       <Program />
-      <Contact /> {/* 追加 */}
+      <Contact />
       <Footer />
     </div>
   );
