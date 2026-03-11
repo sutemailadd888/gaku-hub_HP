@@ -43,7 +43,7 @@ export default function PartnersPage() {
             
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10">
               {[1, 2, 3, 4].map((item) => (
-                <div key={`partner-${item}`} className="aspect-[2/1] bg-[#fafafa] border border-[#eee] flex items-center justify-center group cursor-pointer overflow-hidden transition-all duration-500 hover:border-[#141d58]">
+                <div key={`partner-${item}`} className="aspect-[2/1] bg-[#fafafa] border border-[#e0e0e0] flex items-center justify-center group cursor-pointer overflow-hidden transition-all duration-500 hover:border-[#141d58]">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img 
                     src={`https://placehold.co/400x200/fafafa/999999?text=Partner+Logo`} 
@@ -66,7 +66,7 @@ export default function PartnersPage() {
             
             <div className="grid grid-cols-3 md:grid-cols-5 gap-3 md:gap-6">
               {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item) => (
-                <div key={`sponsor-${item}`} className="aspect-[2/1] bg-white border border-transparent flex items-center justify-center group cursor-pointer transition-all duration-500 hover:border-[#eee]">
+                <div key={`sponsor-${item}`} className="aspect-[2/1] bg-white border border-[#f5f5f5] flex items-center justify-center group cursor-pointer transition-all duration-500 hover:border-[#e0e0e0]">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img 
                     src={`https://placehold.co/300x150/ffffff/aaaaaa?text=Sponsor`} 
@@ -81,8 +81,9 @@ export default function PartnersPage() {
 
         {/* =========================================
             4. スポンサー募集（Join the Ecosystem）
+            ※枠線を #e0e0e0 に変更し、視認性を向上
         ========================================= */}
-        <div className="max-w-4xl mx-auto bg-white border border-[#eee] p-8 md:p-16 mb-16 animate-[fadeIn_1s_ease_forwards_0.5s] opacity-0" style={{ animationFillMode: 'forwards' }}>
+        <div className="max-w-4xl mx-auto bg-white border border-[#e0e0e0] p-8 md:p-16 mb-16 animate-[fadeIn_1s_ease_forwards_0.5s] opacity-0" style={{ animationFillMode: 'forwards' }}>
           <div className="text-center mb-12">
             <h2 className="font-['Didot','Garamond',serif] text-[2rem] tracking-[0.1em] text-[#111111] mb-4">
               Join the Ecosystem
@@ -94,31 +95,36 @@ export default function PartnersPage() {
           </div>
 
           <div className="flex flex-col gap-8">
-            {/* プラン1：オフィシャルパートナー */}
-            <div className="border-b border-[#f5f5f5] pb-8">
+            {/* プラン1：オフィシャルパートナー（解像度と魅力を大幅アップ） */}
+            <div className="border-b border-[#e0e0e0] pb-8">
               <div className="flex flex-col md:flex-row md:justify-between md:items-baseline mb-3">
-                <h3 className="font-['Yu_Mincho','游明朝',serif] text-[1.1rem] text-[#141d58] font-bold tracking-[0.05em]">01. オフィシャルパートナー提携</h3>
+                <h3 className="font-['Yu_Mincho','游明朝',serif] text-[1.1rem] text-[#141d58] tracking-[0.05em]">01. オフィシャルパートナー提携</h3>
                 <div className="font-['Didot','Garamond',serif] text-[1.1rem] text-[#111111] mt-2 md:mt-0 tracking-[0.05em]">
                   初期登録料 ¥3,000 <span className="font-['Yu_Mincho','游明朝',serif] text-[#141d58] text-[0.8rem] ml-2">※現在 無料免除中</span>
                 </div>
               </div>
-              <p className="font-['Yu_Mincho','游明朝',serif] text-[0.9rem] text-[#555] leading-relaxed">
-                学生団体やコミュニティ、HR企業様との共同戦線です。当サイトにOfficial Partnerとしてロゴを掲載し、GAKU-HUBのイベントインフラを自社のコンテンツやアップセル商材として相互に活用できる協業アライアンスです。
+              <p className="font-['Yu_Mincho','游明朝',serif] text-[0.9rem] text-[#555] leading-relaxed mb-4">
+                GAKU-HUBのインフラと熱量を最も深く共有する、最上位の協業アライアンスです。当サイトのトップにOfficial Partnerとしてロゴを掲載し、相互のコミュニティやイベントインフラを共有・活用します。
               </p>
+              <div className="bg-[#fafafa] p-5 border border-[#e0e0e0]">
+                <p className="font-['Yu_Mincho','游明朝',serif] text-[0.85rem] text-[#666] leading-relaxed">
+                  例えば、自社のクライアント（学生や若手社会人）をGAKU-HUBの共創プロジェクトに無料で参加させたり、GAKU-HUBのイベント枠を自社の採用・PRコンテンツとしてアップセル商材に組み込むなど、事業シナジーを生み出す強固な共同戦線を構築します。
+                </p>
+              </div>
             </div>
 
-            {/* プラン2：公式スポンサー登録（ゲートウェイとしての役割を強調） */}
+            {/* プラン2：公式スポンサー登録（太字を廃止し、上品なトーンへ） */}
             <div className="pb-4">
               <div className="flex flex-col md:flex-row md:justify-between md:items-baseline mb-3">
-                <h3 className="font-['Yu_Mincho','游明朝',serif] text-[1.1rem] text-[#111111] font-bold tracking-[0.05em]">02. 公式スポンサー登録</h3>
+                <h3 className="font-['Yu_Mincho','游明朝',serif] text-[1.1rem] text-[#111111] tracking-[0.05em]">02. 公式スポンサー登録</h3>
                 <div className="font-['Didot','Garamond',serif] text-[1.1rem] text-[#111111] mt-2 md:mt-0 tracking-[0.05em]">
                   初期登録料 ¥5,000 <span className="font-['Yu_Mincho','游明朝',serif] text-[#888] text-[0.8rem] ml-2">※現在 無料免除中（月額不要）</span>
                 </div>
               </div>
               <p className="font-['Yu_Mincho','游明朝',serif] text-[0.9rem] text-[#555] leading-relaxed mb-4">
-                次世代の挑戦を支援するスポンサー枠です。当サイトへの企業ロゴ永続掲載に加え、最大のメリットは<span className="font-bold text-[#111111]">「スポンサー限定の実働メニューへのアクセス権」</span>です。月額等のランニングコストは一切かかりません。
+                次世代の挑戦を支援するスポンサー枠です。当サイトへの企業ロゴ永続掲載に加え、最大のメリットは「スポンサー限定の実働メニューへのアクセス権」です。月額等のランニングコストは一切かかりません。
               </p>
-              <div className="bg-[#fafafa] p-5 border border-[#eee]">
+              <div className="bg-[#fafafa] p-5 border border-[#e0e0e0]">
                 <p className="font-['Yu_Mincho','游明朝',serif] text-[0.85rem] text-[#666] leading-relaxed">
                   一度スポンサーとしてご登録いただくと、その後はGAKU-HUB主催イベントでのPRピッチ枠（登壇）や、優秀な学生層へのダイレクトリクルーティングなど、必要な時に必要なだけ、成果報酬等の優待価格でマッチングメニューをご利用いただけます。
                 </p>
@@ -146,7 +152,7 @@ export default function PartnersPage() {
         {/* =========================================
             6. 法人向けソリューションへの導線（クロスセル）
         ========================================= */}
-        <div className="max-w-3xl mx-auto text-center border-t border-[#eee] pt-12 pb-20 animate-[fadeIn_1s_ease_forwards_0.7s] opacity-0" style={{ animationFillMode: 'forwards' }}>
+        <div className="max-w-3xl mx-auto text-center border-t border-[#e0e0e0] pt-12 pb-20 animate-[fadeIn_1s_ease_forwards_0.7s] opacity-0" style={{ animationFillMode: 'forwards' }}>
           <p className="font-['Yu_Mincho','游明朝',serif] text-[0.85rem] text-[#777] leading-relaxed mb-4">
             ※単なるスポンサー登録ではなく、初めから自社の採用支援（ダイレクトリクルーティング）や、<br className="hidden md:block" />
             共創施設でのプロジェクト実行支援（PMO）などのガッツリとした実働ソリューションをご希望の企業様は、<br className="hidden md:block" />
