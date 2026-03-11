@@ -42,7 +42,6 @@ export default function PartnersPage() {
             </div>
             
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10">
-              {/* ※実際のロゴ画像に差し替えて運用します */}
               {[1, 2, 3, 4].map((item) => (
                 <div key={`partner-${item}`} className="aspect-[2/1] bg-[#fafafa] border border-[#eee] flex items-center justify-center group cursor-pointer overflow-hidden transition-all duration-500 hover:border-[#141d58]">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -82,6 +81,7 @@ export default function PartnersPage() {
 
         {/* =========================================
             4. スポンサー募集（Join the Ecosystem）
+            ※ ここを3つのプランに分離・再構築しました
         ========================================= */}
         <div className="max-w-4xl mx-auto bg-white border border-[#eee] p-8 md:p-16 mb-16 animate-[fadeIn_1s_ease_forwards_0.5s] opacity-0" style={{ animationFillMode: 'forwards' }}>
           <div className="text-center mb-12">
@@ -95,32 +95,42 @@ export default function PartnersPage() {
           </div>
 
           <div className="flex flex-col gap-8">
-            {/* プランA：オフィシャルパートナー */}
+            {/* プラン1：オフィシャルパートナー */}
             <div className="border-b border-[#f5f5f5] pb-8">
               <div className="flex flex-col md:flex-row md:justify-between md:items-baseline mb-3">
-                <h3 className="font-['Yu_Mincho','游明朝',serif] text-[1.1rem] text-[#141d58] font-bold tracking-[0.05em]">オフィシャルパートナー提携（協業・インフラ共有）</h3>
+                <h3 className="font-['Yu_Mincho','游明朝',serif] text-[1.1rem] text-[#141d58] font-bold tracking-[0.05em]">01. オフィシャルパートナー提携</h3>
                 <div className="font-['Didot','Garamond',serif] text-[1.1rem] text-[#111111] mt-2 md:mt-0 tracking-[0.05em]">
                   初期登録料 ¥3,000 <span className="font-['Yu_Mincho','游明朝',serif] text-[#141d58] text-[0.8rem] ml-2">※現在 無料免除中</span>
                 </div>
               </div>
               <p className="font-['Yu_Mincho','游明朝',serif] text-[0.9rem] text-[#555] leading-relaxed">
-                学生団体やコミュニティ、HR企業様との共同戦線です。当サイトにOfficial Partnerとしてロゴを掲載し、GAKU-HUBのイベントインフラを自社のコンテンツやアップセル商材として相互に活用できます。
+                学生団体やコミュニティ、HR企業様との共同戦線です。当サイトにOfficial Partnerとしてロゴを掲載し、GAKU-HUBのイベントインフラを自社のコンテンツやアップセル商材として相互に活用できる協業アライアンスです。
               </p>
             </div>
 
-            {/* プランB：スポンサー登録＆PRマッチング */}
+            {/* プラン2：公式スポンサー登録（ハードルの低い入り口） */}
+            <div className="border-b border-[#f5f5f5] pb-8">
+              <div className="flex flex-col md:flex-row md:justify-between md:items-baseline mb-3">
+                <h3 className="font-['Yu_Mincho','游明朝',serif] text-[1.1rem] text-[#111111] font-bold tracking-[0.05em]">02. 公式スポンサー登録（純協賛）</h3>
+                <div className="font-['Didot','Garamond',serif] text-[1.1rem] text-[#111111] mt-2 md:mt-0 tracking-[0.05em]">
+                  初期登録料 ¥5,000 <span className="font-['Yu_Mincho','游明朝',serif] text-[#888] text-[0.8rem] ml-2">※現在 無料免除中</span>
+                </div>
+              </div>
+              <p className="font-['Yu_Mincho','游明朝',serif] text-[0.9rem] text-[#555] leading-relaxed">
+                「次世代の挑戦を応援したい」という企業様向けの最もスタンダードなプランです。当サイトにSponsorとして企業ロゴを永続的に掲載し、社会的意義（CSR）やブランディング向上に貢献します。まずはここから参画し、学生の熱量に触れてみてください。
+              </p>
+            </div>
+
+            {/* プラン3：PRマッチング（実働オプション） */}
             <div className="pb-4">
               <div className="flex flex-col md:flex-row md:justify-between md:items-baseline mb-3">
-                <h3 className="font-['Yu_Mincho','游明朝',serif] text-[1.1rem] text-[#111111] font-bold tracking-[0.05em]">公式スポンサー登録 ＆ PRマッチング</h3>
+                <h3 className="font-['Yu_Mincho','游明朝',serif] text-[1.1rem] text-[#111111] font-bold tracking-[0.05em]">03. イベントPR枠・採用マッチング</h3>
                 <div className="font-['Didot','Garamond',serif] text-[1.1rem] text-[#111111] mt-2 md:mt-0 tracking-[0.05em]">
                   登壇費 ¥5,000〜 <span className="font-['Yu_Mincho','游明朝',serif] text-[#888] text-[0.8rem]">＋ 成果報酬</span>
                 </div>
               </div>
               <p className="font-['Yu_Mincho','游明朝',serif] text-[0.9rem] text-[#555] leading-relaxed mb-3">
-                当サイトにSponsorとしてロゴを永続掲載いたします（初期登録料 ¥5,000 / ※現在無料免除中）。さらに、GAKU-HUB主催イベントごとに参加学生の属性に最もマッチする登録企業様を抜擢し、5分ピッチ等のPR枠をご案内します。
-              </p>
-              <p className="font-['Yu_Mincho','游明朝',serif] text-[0.8rem] text-[#888] leading-relaxed">
-                ※公式登録企業様向けの優待価格です。ターゲット外への無駄な広告費を削る、精度の高い成果報酬型PRモデルです。
+                スポンサー登録企業様向けのオプション・ソリューションです。GAKU-HUB主催イベントにおいて、参加学生の属性に最もマッチする企業様を抜擢し、5分ピッチ等のPR枠をご案内します。ターゲット外への無駄な広告費を削る、精度の高い成果報酬型PRモデルです。
               </p>
             </div>
           </div>
@@ -148,7 +158,7 @@ export default function PartnersPage() {
         <div className="text-center pb-12 animate-[fadeIn_1s_ease_forwards_0.7s] opacity-0" style={{ animationFillMode: 'forwards' }}>
           <Link 
             href="/" 
-            className="inline-block border-b border-[#111111] pb-1 text-[0.85rem] tracking-[0.1em] text-[#111111] font-['Didot','Garamond',serif] hover:text-[#141d58] hover:border-[#141d58] transition-colors duration-300"
+            className="inline-block border border-[#111111] px-[3rem] py-[1rem] text-[0.9rem] tracking-[0.1em] text-[#111111] font-['Didot','Garamond',serif] hover:bg-[#141d58] hover:border-[#141d58] hover:text-white transition-all duration-500"
           >
             Back to Home
           </Link>
