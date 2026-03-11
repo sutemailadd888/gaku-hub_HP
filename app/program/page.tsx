@@ -21,8 +21,9 @@ export default function ProgramHub() {
         {/* 左の扉：Challengers（挑戦者向け） */}
         <Link 
           href="/program/challenger" 
-          className="flex-1 group relative overflow-hidden border border-[#e0e0e0] bg-white p-10 md:p-16 text-center hover:border-[#141d58] hover:shadow-[0_20px_40px_rgba(20,29,88,0.08)] transition-all duration-500"
+          className="flex-1 group relative overflow-hidden border border-[#e0e0e0] bg-white p-10 md:p-16 flex flex-col justify-center items-center text-center transition-all duration-700 hover:border-[#141d58] hover:shadow-[0_20px_40px_rgba(20,29,88,0.08)]"
         >
+          {/* ホバー時に背景がほんの少しだけ上にスライドする上品な演出 */}
           <div className="absolute inset-0 bg-[#fbfbfc] translate-y-full group-hover:translate-y-0 transition-transform duration-700 ease-[cubic-bezier(0.4,0,0.2,1)] z-0"></div>
           
           <div className="relative z-10 flex flex-col items-center">
@@ -30,22 +31,23 @@ export default function ProgramHub() {
               For Challengers
             </span>
             <h2 className="font-['Yu_Mincho','游明朝',serif] text-[1.6rem] md:text-[2rem] tracking-[0.1em] mb-6 text-[#111111] font-normal">
-              自らの想いをカタチにする
+              想いをカタチにする
             </h2>
             <p className="font-['Yu_Mincho','游明朝',serif] text-[0.95rem] text-[#555] leading-[2.2] mb-12">
-              プロジェクト創出、イベント開催など<br />
+              プロジェクトの実装に挑戦したい<br />
               個人・学生・団体の方はこちら
             </p>
+            {/* 枠全体をホバーした時に、このボタンもネイビーに染まる */}
             <span className="inline-block border border-[#111111] px-[3rem] py-[1rem] text-[0.9rem] tracking-[0.1em] text-[#111111] font-['Didot','Garamond',serif] group-hover:bg-[#141d58] group-hover:border-[#141d58] group-hover:text-white transition-all duration-500">
               Enter
             </span>
           </div>
         </Link>
 
-        {/* 右の扉：Companies（法人向け） */}
+        {/* 右の扉：Partners（法人向け） */}
         <Link 
           href="/program/company" 
-          className="flex-1 group relative overflow-hidden border border-[#e0e0e0] bg-white p-10 md:p-16 text-center hover:border-[#141d58] hover:shadow-[0_20px_40px_rgba(20,29,88,0.08)] transition-all duration-500"
+          className="flex-1 group relative overflow-hidden border border-[#e0e0e0] bg-white p-10 md:p-16 flex flex-col justify-center items-center text-center transition-all duration-700 hover:border-[#141d58] hover:shadow-[0_20px_40px_rgba(20,29,88,0.08)]"
         >
           <div className="absolute inset-0 bg-[#fbfbfc] translate-y-full group-hover:translate-y-0 transition-transform duration-700 ease-[cubic-bezier(0.4,0,0.2,1)] z-0"></div>
           
@@ -67,7 +69,8 @@ export default function ProgramHub() {
         </Link>
 
       </div>
-
+      
+      {/* CSSアニメーションの定義 */}
       <style jsx>{`
         @keyframes fadeIn {
           from { opacity: 0; transform: translateY(15px); }
