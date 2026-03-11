@@ -6,7 +6,7 @@ export default function Partners() {
       <div className="max-w-6xl mx-auto px-[5%]">
 
         {/* =========================================
-            セクションタイトル (Serviceと完全に統一)
+            セクションタイトル
         ========================================= */}
         <div className="text-center mb-24 md:mb-32 fade-in opacity-0 translate-y-10 transition-all duration-700">
           <h2 className="font-['Didot','Garamond',serif] text-[2.5rem] tracking-[0.15em] mb-4 font-light text-[#111111]">
@@ -18,12 +18,13 @@ export default function Partners() {
         </div>
 
         {/* =========================================
-            ロゴコンテンツ (少し遅れてフワッと表示)
+            ロゴコンテンツ
         ========================================= */}
         <div className="fade-in opacity-0 translate-y-10 transition-all duration-700 delay-100">
           
-          {/* 1. Official Partners (上位・協業アライアンス) */}
-          <div className="mb-24">
+          {/* 1. Official Partners */}
+          {/* mb-24 から mb-16 md:mb-20 に縮小し、まとまりを持たせました */}
+          <div className="mb-16 md:mb-20">
             <div className="text-center mb-10">
               <h3 className="font-['Didot','Garamond',serif] text-[1.2rem] tracking-[0.15em] text-[#141d58] mb-2 uppercase">Official Partners</h3>
               <p className="font-['Yu_Mincho','游明朝',serif] text-[0.8rem] text-[#666] tracking-[0.05em]">インフラを共有し、共に若手の挑戦を牽引する協業アライアンス</p>
@@ -44,9 +45,10 @@ export default function Partners() {
             </div>
           </div>
 
-          <div className="w-[1px] h-12 bg-[#e0e0e0] mx-auto mb-20"></div>
+          {/* 区切り線周辺の余白も mb-20 から mb-16 md:mb-20 に縮小 */}
+          <div className="w-[1px] h-16 bg-[#e0e0e0] mx-auto mb-16 md:mb-20"></div>
 
-          {/* 2. Sponsors (協賛企業) */}
+          {/* 2. Sponsors */}
           <div className="mb-8">
             <div className="text-center mb-10">
               <h3 className="font-['Didot','Garamond',serif] text-[1.2rem] tracking-[0.15em] text-[#111111] mb-2 uppercase">Sponsors</h3>
@@ -70,12 +72,13 @@ export default function Partners() {
         </div>
 
         {/* =========================================
-            CTA Button (Serviceと完全に同じスタイル)
+            CTA Button
+            ※ uppercaseクラスを削除し、Serviceセクションと統一
         ========================================= */}
         <div className="text-center mt-20 md:mt-28 fade-in opacity-0 translate-y-10 transition-all duration-700 delay-300">
           <Link 
             href="/service" 
-            className="inline-block border border-[#111111] px-[3rem] py-[1rem] text-[0.9rem] tracking-[0.1em] text-[#111111] font-['Didot','Garamond',serif] hover:bg-[#141d58] hover:border-[#141d58] hover:text-white transition-all duration-500 uppercase"
+            className="inline-block border border-[#111111] px-[3rem] py-[1rem] text-[0.9rem] tracking-[0.1em] text-[#111111] font-['Didot','Garamond',serif] hover:bg-[#141d58] hover:border-[#141d58] hover:text-white transition-all duration-500"
           >
             View Partnership Details
           </Link>
