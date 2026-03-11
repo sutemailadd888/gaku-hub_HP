@@ -81,7 +81,7 @@ export default function PartnersPage() {
 
         {/* =========================================
             4. スポンサー募集（Join the Ecosystem）
-            ※ ここを3つのプランに分離・再構築しました
+            ※純粋な「提携・協賛」の2プランに絞り込みました
         ========================================= */}
         <div className="max-w-4xl mx-auto bg-white border border-[#eee] p-8 md:p-16 mb-16 animate-[fadeIn_1s_ease_forwards_0.5s] opacity-0" style={{ animationFillMode: 'forwards' }}>
           <div className="text-center mb-12">
@@ -108,8 +108,8 @@ export default function PartnersPage() {
               </p>
             </div>
 
-            {/* プラン2：公式スポンサー登録（ハードルの低い入り口） */}
-            <div className="border-b border-[#f5f5f5] pb-8">
+            {/* プラン2：公式スポンサー登録（純協賛） */}
+            <div className="pb-4">
               <div className="flex flex-col md:flex-row md:justify-between md:items-baseline mb-3">
                 <h3 className="font-['Yu_Mincho','游明朝',serif] text-[1.1rem] text-[#111111] font-bold tracking-[0.05em]">02. 公式スポンサー登録（純協賛）</h3>
                 <div className="font-['Didot','Garamond',serif] text-[1.1rem] text-[#111111] mt-2 md:mt-0 tracking-[0.05em]">
@@ -120,27 +120,14 @@ export default function PartnersPage() {
                 「次世代の挑戦を応援したい」という企業様向けの最もスタンダードなプランです。当サイトにSponsorとして企業ロゴを永続的に掲載し、社会的意義（CSR）やブランディング向上に貢献します。まずはここから参画し、学生の熱量に触れてみてください。
               </p>
             </div>
-
-            {/* プラン3：PRマッチング（実働オプション） */}
-            <div className="pb-4">
-              <div className="flex flex-col md:flex-row md:justify-between md:items-baseline mb-3">
-                <h3 className="font-['Yu_Mincho','游明朝',serif] text-[1.1rem] text-[#111111] font-bold tracking-[0.05em]">03. イベントPR枠・採用マッチング</h3>
-                <div className="font-['Didot','Garamond',serif] text-[1.1rem] text-[#111111] mt-2 md:mt-0 tracking-[0.05em]">
-                  登壇費 ¥5,000〜 <span className="font-['Yu_Mincho','游明朝',serif] text-[#888] text-[0.8rem]">＋ 成果報酬</span>
-                </div>
-              </div>
-              <p className="font-['Yu_Mincho','游明朝',serif] text-[0.9rem] text-[#555] leading-relaxed mb-3">
-                スポンサー登録企業様向けのオプション・ソリューションです。GAKU-HUB主催イベントにおいて、参加学生の属性に最もマッチする企業様を抜擢し、5分ピッチ等のPR枠をご案内します。ターゲット外への無駄な広告費を削る、精度の高い成果報酬型PRモデルです。
-              </p>
-            </div>
           </div>
         </div>
 
         {/* =========================================
             5. CTA（お問い合わせ）
         ========================================= */}
-        <div className="text-center mb-24 animate-[fadeIn_1s_ease_forwards_0.6s] opacity-0" style={{ animationFillMode: 'forwards' }}>
-          <p className="font-['Yu_Mincho','游明朝',serif] text-[0.95rem] text-[#555] tracking-[0.08em] mb-10">
+        <div className="text-center mb-16 animate-[fadeIn_1s_ease_forwards_0.6s] opacity-0" style={{ animationFillMode: 'forwards' }}>
+          <p className="font-['Yu_Mincho','游明朝',serif] text-[0.95rem] text-[#555] tracking-[0.08em] mb-8">
             パートナー提携・協賛に関する資料請求や、<br className="hidden md:block" />
             オンラインでのカジュアルな面談を承っております。
           </p>
@@ -153,9 +140,26 @@ export default function PartnersPage() {
         </div>
 
         {/* =========================================
-            6. ホームへ戻るボタン
+            6. 法人向けソリューションへの導線（クロスセル）
         ========================================= */}
-        <div className="text-center pb-12 animate-[fadeIn_1s_ease_forwards_0.7s] opacity-0" style={{ animationFillMode: 'forwards' }}>
+        <div className="max-w-3xl mx-auto text-center border-t border-[#eee] pt-12 pb-20 animate-[fadeIn_1s_ease_forwards_0.7s] opacity-0" style={{ animationFillMode: 'forwards' }}>
+          <p className="font-['Yu_Mincho','游明朝',serif] text-[0.85rem] text-[#777] leading-relaxed mb-4">
+            ※単なる協賛ではなく、具体的な採用支援（ダイレクトリクルーティング）や、<br className="hidden md:block" />
+            共創施設でのプロジェクト実行支援（PMO）などの実働ソリューションをご希望の企業様は、<br className="hidden md:block" />
+            法人向けプログラム（Corporate Solutions）をご覧ください。
+          </p>
+          <Link 
+            href="/program/company" 
+            className="inline-block border-b border-[#888] pb-1 text-[0.8rem] tracking-[0.1em] text-[#555] font-['Didot','Garamond',serif] hover:text-[#141d58] hover:border-[#141d58] transition-colors duration-300"
+          >
+            View Corporate Solutions
+          </Link>
+        </div>
+
+        {/* =========================================
+            7. ホームへ戻るボタン
+        ========================================= */}
+        <div className="text-center pb-12 animate-[fadeIn_1s_ease_forwards_0.8s] opacity-0" style={{ animationFillMode: 'forwards' }}>
           <Link 
             href="/" 
             className="inline-block border border-[#111111] px-[3rem] py-[1rem] text-[0.9rem] tracking-[0.1em] text-[#111111] font-['Didot','Garamond',serif] hover:bg-[#141d58] hover:border-[#141d58] hover:text-white transition-all duration-500"
