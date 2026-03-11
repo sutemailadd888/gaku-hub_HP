@@ -124,7 +124,7 @@ export default function Philosophy() {
             <div className="text-center md:text-left">
               <h3 className="font-['Didot','Garamond',serif] text-[1.2rem] tracking-[0.1em] text-[#111111] mb-2">Message from Founder</h3>
               <p className="font-['Yu_Mincho','游明朝',serif] text-[0.9rem] text-[#555] leading-[2.4] tracking-[0.08em] mb-6">
-                （※ここに久保さんの創業に対する想いや、なぜGAKU-HUBを立ち上げたのかという、少しパーソナルなストーリーを2〜3行で入れると、企業の担当者にも学生にも強烈に刺さります。）
+                僕の中で生きる意味は「好きをカタチにする」こと、つまり自分の中にある想いを具体的なカタチにして社会に届けることです。どんなに素晴らしいアイデアも、頭の中にあるだけでは世界は変わりません。だからこそGAKU-HUBは、次世代の純粋な熱量を、事業やプロジェクトとして社会実装するまでの確かな「結節点」でありたいと考えています。
               </p>
               <p className="font-['Yu_Mincho','游明朝',serif] text-[0.85rem] tracking-[0.1em] text-[#111111]">
                 GAKU-HUB Founder & Producer<br />
@@ -140,7 +140,7 @@ export default function Philosophy() {
         <div className="text-center pb-12 animate-[fadeIn_1s_ease_forwards_0.7s] opacity-0" style={{ animationFillMode: 'forwards' }}>
           <Link 
             href="/" 
-            className="inline-block border border-[#111111] px-[3rem] py-[1rem] text-[0.85rem] tracking-[0.1em] text-[#111111] font-['Didot','Garamond',serif] hover:bg-[#141d58] hover:border-[#141d58] hover:text-white transition-all duration-500 uppercase"
+            className="inline-block border border-[#111111] px-[3rem] py-[1rem] text-[0.9rem] tracking-[0.1em] text-[#111111] font-['Didot','Garamond',serif] hover:bg-[#141d58] hover:border-[#141d58] hover:text-white transition-all duration-500"
           >
             Back to Home
           </Link>

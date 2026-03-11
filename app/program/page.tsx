@@ -38,7 +38,7 @@ export default function ProgramHub() {
               個人・学生・団体の方はこちら
             </p>
             {/* 枠全体をホバーした時に、このボタンもネイビーに染まる */}
-            <span className="inline-block border border-[#111111] px-[3rem] py-[1rem] text-[0.85rem] tracking-[0.1em] text-[#111111] font-['Didot','Garamond',serif] group-hover:bg-[#141d58] group-hover:border-[#141d58] group-hover:text-white transition-all duration-500 uppercase">
+            <span className="inline-block border border-[#111111] px-[3rem] py-[1rem] text-[0.9rem] tracking-[0.1em] text-[#111111] font-['Didot','Garamond',serif] group-hover:bg-[#141d58] group-hover:border-[#141d58] group-hover:text-white transition-all duration-500">
               Enter
             </span>
           </div>
@@ -62,7 +62,7 @@ export default function ProgramHub() {
               共創PMOやHR支援など<br />
               法人・共創施設・学生団体の方はこちら
             </p>
-            <span className="inline-block border border-[#111111] px-[3rem] py-[1rem] text-[0.85rem] tracking-[0.1em] text-[#111111] font-['Didot','Garamond',serif] group-hover:bg-[#141d58] group-hover:border-[#141d58] group-hover:text-white transition-all duration-500 uppercase">
+            <span className="inline-block border border-[#111111] px-[3rem] py-[1rem] text-[0.9rem] tracking-[0.1em] text-[#111111] font-['Didot','Garamond',serif] group-hover:bg-[#141d58] group-hover:border-[#141d58] group-hover:text-white transition-all duration-500">
               Enter
             </span>
           </div>
