@@ -5,9 +5,7 @@ export default function Partners() {
     <section id="partners" className="py-24 md:py-32 bg-white px-[5%] border-t border-[#eee]">
       <div className="max-w-6xl mx-auto">
 
-        {/* =========================================
-            セクションタイトル
-        ========================================= */}
+        {/* セクションタイトル */}
         <div className="text-center mb-20 md:mb-24 fade-in opacity-0 translate-y-10 transition-all duration-700">
           <h2 className="font-['Didot','Garamond',serif] text-[2.5rem] tracking-[0.15em] mb-4 font-light text-[#111111]">
             PARTNERS & SPONSORS
@@ -17,9 +15,7 @@ export default function Partners() {
           </p>
         </div>
 
-        {/* =========================================
-            ロゴコンテンツ
-        ========================================= */}
+        {/* ロゴコンテンツ */}
         <div className="fade-in opacity-0 translate-y-10 transition-all duration-700 delay-100">
           
           {/* 1. Official Partners */}
@@ -29,7 +25,6 @@ export default function Partners() {
               <p className="font-['Yu_Mincho','游明朝',serif] text-[0.8rem] text-[#666] tracking-[0.05em]">インフラを共有し、共に若手の挑戦を牽引する協業アライアンス</p>
             </div>
             
-            {/* Partner Logos */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10">
               {[1, 2, 3, 4].map((item) => (
                 <div key={`partner-${item}`} className="aspect-[2/1] bg-[#fafafa] border border-[#eee] flex items-center justify-center group cursor-pointer overflow-hidden transition-all duration-500 hover:border-[#141d58]">
@@ -44,7 +39,6 @@ export default function Partners() {
             </div>
           </div>
 
-          {/* 区切り線（上下の余白を my-12 md:my-16 にして適正化） */}
           <div className="w-[1px] h-12 md:h-16 bg-gradient-to-b from-transparent via-[#ccc] to-transparent mx-auto my-12 md:my-16"></div>
 
           {/* 2. Sponsors */}
@@ -54,7 +48,6 @@ export default function Partners() {
               <p className="font-['Yu_Mincho','游明朝',serif] text-[0.8rem] text-[#666] tracking-[0.05em]">次世代のチャレンジャーを支援し、共創を加速させる協賛企業様</p>
             </div>
             
-            {/* Sponsor Logos */}
             <div className="grid grid-cols-3 md:grid-cols-5 gap-3 md:gap-6">
               {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item) => (
                 <div key={`sponsor-${item}`} className="aspect-[2/1] bg-white border border-transparent flex items-center justify-center group cursor-pointer transition-all duration-500 hover:border-[#eee]">
@@ -71,11 +64,11 @@ export default function Partners() {
         </div>
 
         {/* =========================================
-            CTA Button (他セクションと完全に同一)
+            CTA Button (飛び先を /partners に修正)
         ========================================= */}
         <div className="text-center mt-20 md:mt-28 fade-in opacity-0 translate-y-10 transition-all duration-700 delay-300">
           <Link 
-            href="/service" 
+            href="/partners" 
             className="inline-block border border-[#111111] px-[3rem] py-[1rem] text-[0.9rem] tracking-[0.1em] text-[#111111] font-['Didot','Garamond',serif] hover:bg-[#141d58] hover:border-[#141d58] hover:text-white transition-all duration-500"
           >
             View Partnership Details
