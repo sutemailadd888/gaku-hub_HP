@@ -69,6 +69,15 @@ export default function ProgramHub() {
         </Link>
 
       </div>
+
+     <div className="text-center mt-20 animate-[fadeIn_1s_ease_forwards_0.4s] opacity-0" style={{ animationFillMode: 'forwards' }}>
+        <Link 
+          href="/" 
+          className="inline-block border-b border-[#111111] pb-1 text-[0.85rem] tracking-[0.1em] text-[#111111] font-['Didot','Garamond',serif] hover:text-[#141d58] hover:border-[#141d58] transition-colors duration-300"
+        >
+          Back to Home
+        </Link>
+      </div>
       
       {/* CSSアニメーションの定義 */}
       <style jsx>{`
