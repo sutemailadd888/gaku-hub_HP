@@ -173,12 +173,18 @@ export default function Service() {
                   <div className="flex flex-col md:flex-row md:justify-between md:items-baseline mb-3">
                     <h5 className="font-['Yu_Mincho','游明朝',serif] text-[1.05rem] text-[#111111] tracking-[0.05em]">カスタム・イベント共催（法人向け）</h5>
                     <div className="font-['Didot','Garamond',serif] text-[1.1rem] text-[#141d58] mt-2 md:mt-0 tracking-[0.05em]">
-                      企画費 ¥10,000〜 <span className="text-[0.75rem] text-[#888]">＋ 成果報酬</span>
+                      企画・運営費 ¥50,000〜 <span className="text-[0.75rem] text-[#888]">＋ 成果報酬</span>
                     </div>
                   </div>
                   <p className="font-['Yu_Mincho','游明朝',serif] text-[0.9rem] text-[#555] leading-relaxed mb-3">
                     企業の課題（採用・新規事業等）に合わせ、コミュニティを巻き込んだ独自イベントをゼロから企画。無理な人数合わせはせず、熱量と条件（特定年度卒等）に合致したターゲットのみを集客する質重視のモデルです。
                   </p>
+                  <div className="bg-[#fafafa] p-4 border border-[#e0e0e0]">
+                    <p className="font-['Yu_Mincho','游明朝',serif] text-[0.8rem] text-[#666] leading-relaxed">
+                      ※数百万の費用がかかる大規模な合同説明会とは異なり、最低限の「場づくり」の実費と、採用等のマッチングが成立した際の「成果報酬」を組み合わせた、企業にとってリスクの少ないフェアな座組みです。<br />
+                      （※学生への知見還元を主目的とする社会人ゲスト登壇等の場合は、費用は頂戴しておりません）
+                    </p>
+                  </div>
                 </div>
 
               </div>
