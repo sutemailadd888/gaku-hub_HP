@@ -1,13 +1,13 @@
 "use client";
 import Link from 'next/link';
 
-export default function PartnerProgram() {
+export default function CorporateSolutions() {
   return (
     <div className="min-h-screen bg-[#FAFAFA] pt-32 pb-24 px-[5%] selection:bg-[#141d58] selection:text-white">
       <div className="max-w-5xl mx-auto">
         
         {/* =========================================
-            1. パッケージタイトル＆ヒーロー
+            1. ページタイトル
         ========================================= */}
         <div className="text-center mb-16 animate-[fadeIn_1s_ease_forwards]">
           <span className="font-['Didot','Garamond',serif] text-[#141d58] tracking-[0.2em] text-[0.85rem] uppercase block mb-4">
@@ -17,7 +17,7 @@ export default function PartnerProgram() {
             次世代の熱量に、<br className="md:hidden" />最短距離でアクセスする。
           </h1>
           <p className="font-['Yu_Mincho','游明朝',serif] text-[0.95rem] text-[#555] tracking-[0.08em] mt-8 leading-[2]">
-            法人・共創施設・HR事業者・学生団体様向け<br />
+            法人・共創施設・HR事業者様向け<br />
             アライアンス＆ソリューション
           </p>
         </div>
@@ -25,7 +25,7 @@ export default function PartnerProgram() {
         {/* =========================================
             2. コンセプト（Why GAKU-HUB?）
         ========================================= */}
-        <div className="bg-white border border-[#eee] p-8 md:p-16 mb-24 animate-[fadeIn_1s_ease_forwards_0.2s] opacity-0" style={{ animationFillMode: 'forwards' }}>
+        <div className="bg-white border border-[#e0e0e0] p-8 md:p-16 mb-24 animate-[fadeIn_1s_ease_forwards_0.2s] opacity-0" style={{ animationFillMode: 'forwards' }}>
           <h2 className="text-center font-['Yu_Mincho','游明朝',serif] text-[1.4rem] tracking-[0.1em] text-[#111111] mb-8">
             「人数合わせ」の集客は、もう終わりにしませんか。
           </h2>
@@ -36,43 +36,56 @@ export default function PartnerProgram() {
         </div>
 
         {/* =========================================
-            3. 3つの法人向けソリューション (横並びグリッド)
+            3. ソリューションメニュー（金額と見せ方の改定）
         ========================================= */}
         <div className="mb-24">
           <h3 className="text-center font-['Didot','Garamond',serif] text-[1.2rem] tracking-[0.15em] text-[#111111] mb-12 uppercase animate-[fadeIn_1s_ease_forwards_0.3s] opacity-0" style={{ animationFillMode: 'forwards' }}>
             Solution Menu
           </h3>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
             
-            {/* Menu 1: Official Partner */}
-            <div className="bg-white border border-[#eee] p-8 text-center group hover:border-[#141d58] transition-colors duration-500 animate-[fadeIn_1s_ease_forwards_0.4s] opacity-0" style={{ animationFillMode: 'forwards' }}>
-              <div className="font-['Didot','Garamond',serif] text-[1.5rem] text-[#141d58] mb-4 tracking-[0.1em]">Alliance</div>
-              <h4 className="font-['Yu_Mincho','游明朝',serif] text-[1.1rem] text-[#111111] mb-2">オフィシャルパートナー提携</h4>
-              <div className="text-[0.8rem] text-[#888] mb-6 font-['Didot','Garamond',serif]">初期登録料 ¥3,000</div>
-              <p className="font-['Yu_Mincho','游明朝',serif] text-[0.85rem] text-[#666] leading-relaxed text-left">
-                学生団体やHR企業様とのインフラ共有。「共創パッケージ枠」のメンバー無料利用や、貴社クライアントに対するPR枠の優待卸売り（自社のアップセル商材化）など、強力な協業体制を構築します。
-                <span className="block mt-4 text-[#141d58] font-bold">※現在、初期パートナー限定で無料免除中</span>
+            {/* Menu 1: HR Support (PR枠・マッチング) */}
+            <div className="bg-white border border-[#e0e0e0] p-8 md:p-12 transition-colors duration-500 hover:border-[#141d58] animate-[fadeIn_1s_ease_forwards_0.4s] opacity-0 group" style={{ animationFillMode: 'forwards' }}>
+              <div className="font-['Didot','Garamond',serif] text-[1.5rem] text-[#e0e0e0] mb-6 group-hover:text-[#141d58] transition-colors duration-500">01</div>
+              <h4 className="font-['Yu_Mincho','游明朝',serif] text-[1.2rem] text-[#111111] mb-4">イベントPR枠・採用マッチング</h4>
+              
+              <div className="mb-6">
+                <div className="font-['Didot','Garamond',serif] text-[1.1rem] text-[#111111] tracking-[0.05em]">
+                  ベース費用 ¥5,000〜 <span className="font-['Yu_Mincho','游明朝',serif] text-[#141d58] text-[0.8rem] ml-1">＋ 成果報酬</span>
+                </div>
+              </div>
+              
+              <p className="font-['Yu_Mincho','游明朝',serif] text-[0.9rem] text-[#555] leading-relaxed mb-4">
+                数百人を集める合同説明会ではありません。御社のターゲットに合致する「熱量の高い少数精鋭」をGAKU-HUBがキュレーションし、イベントのピッチ枠などでダイレクトに引き合わせます。
               </p>
+              <div className="bg-[#fafafa] p-4 border border-[#eee]">
+                <p className="font-['Yu_Mincho','游明朝',serif] text-[0.8rem] text-[#666] leading-relaxed">
+                  ※特定の年次や人数の確約ができないからこそ、無駄な広告費や高額な登壇費はいただきません。ベース費用は実費レベルに抑え、「実際に採用やマッチングが成立した際」のみ報酬をいただく完全フェアなモデルです。
+                </p>
+              </div>
             </div>
 
-            {/* Menu 2: HR Support */}
-            <div className="bg-white border border-[#eee] p-8 text-center group hover:border-[#141d58] transition-colors duration-500 animate-[fadeIn_1s_ease_forwards_0.5s] opacity-0" style={{ animationFillMode: 'forwards' }}>
-              <div className="font-['Didot','Garamond',serif] text-[1.5rem] text-[#141d58] mb-4 tracking-[0.1em]">HR Support</div>
-              <h4 className="font-['Yu_Mincho','游明朝',serif] text-[1.1rem] text-[#111111] mb-2">次世代HR支援・PR枠卸売</h4>
-              <div className="text-[0.8rem] text-[#888] mb-6 font-['Didot','Garamond',serif]">卸売ベース ¥10,000〜 ＋ 成果報酬</div>
-              <p className="font-['Yu_Mincho','游明朝',serif] text-[0.85rem] text-[#666] leading-relaxed text-left">
-                自社で採用支援を行うHR事業者様や一般企業様向け。GAKU-HUBイベントのPR枠提供や、コミュニティ内で発掘した優秀層のシークレット送客など、精度の高いダイレクトリクルーティングを実現します。
-              </p>
-            </div>
+            {/* Menu 2: Co-creation PMO (実行支援) */}
+            <div className="bg-white border border-[#e0e0e0] p-8 md:p-12 transition-colors duration-500 hover:border-[#141d58] animate-[fadeIn_1s_ease_forwards_0.5s] opacity-0 group" style={{ animationFillMode: 'forwards' }}>
+              <div className="font-['Didot','Garamond',serif] text-[1.5rem] text-[#e0e0e0] mb-6 group-hover:text-[#141d58] transition-colors duration-500">02</div>
+              <h4 className="font-['Yu_Mincho','游明朝',serif] text-[1.2rem] text-[#111111] mb-4">共創施設・新規事業 実行支援 (PMO)</h4>
+              
+              <div className="mb-6">
+                <div className="font-['Didot','Garamond',serif] text-[1.1rem] text-[#111111] tracking-[0.05em]">
+                  定価 月額 ¥100,000〜 <span className="font-['Yu_Mincho','游明朝',serif] text-[#141d58] text-[0.8rem] ml-1">＋ 成果報酬</span>
+                </div>
+                {/* ▼ トライアル枠の見せ方（上品なバッジ風） ▼ */}
+                <div className="inline-block mt-3 bg-[#f5f5f5] border border-[#e0e0e0] px-3 py-1.5 text-[0.8rem] text-[#141d58] font-['Yu_Mincho','游明朝',serif] tracking-[0.05em]">
+                  現在、初期導入向けの「PoC（お試し）特別価格：月額 ¥30,000〜」をご案内中です。
+                </div>
+              </div>
 
-            {/* Menu 3: Co-creation PMO */}
-            <div className="bg-white border border-[#eee] p-8 text-center group hover:border-[#141d58] transition-colors duration-500 animate-[fadeIn_1s_ease_forwards_0.6s] opacity-0" style={{ animationFillMode: 'forwards' }}>
-              <div className="font-['Didot','Garamond',serif] text-[1.5rem] text-[#141d58] mb-4 tracking-[0.1em]">PMO</div>
-              <h4 className="font-['Yu_Mincho','游明朝',serif] text-[1.1rem] text-[#111111] mb-2">共創施設・新規事業 実行支援</h4>
-              <div className="text-[0.8rem] text-[#888] mb-6 font-['Didot','Garamond',serif]">月額ベース ¥30,000〜 ＋ 成果報酬</div>
-              <p className="font-['Yu_Mincho','游明朝',serif] text-[0.85rem] text-[#666] leading-relaxed text-left">
-                「場はあるが実績が生まれない」共創施設などに、外部の実行部隊（PMO）として入り込みます。質の高い共創事例の創出のみにコミットする、リスクを抑えたフェアな伴走型コンサルティングです。
+              <p className="font-['Yu_Mincho','游明朝',serif] text-[0.9rem] text-[#555] leading-relaxed mb-4">
+                「場はあるが実績が生まれない」共創施設などに、外部の実行部隊（PMO）として入り込みます。コンサルティング会社のような高額な固定費は頂かず、質の高い共創事例の創出（成果）にコミットします。
+              </p>
+              <p className="font-['Yu_Mincho','游明朝',serif] text-[0.8rem] text-[#888] leading-relaxed">
+                ※本格稼働前のPoC（概念実証）期間として、低リスクでスタートできるお試し枠をご用意しております。詳細はお問い合わせください。
               </p>
             </div>
 
@@ -84,16 +97,17 @@ export default function PartnerProgram() {
         ========================================= */}
         <div className="bg-[#111111] text-white p-10 md:p-16 mb-24 animate-[fadeIn_1s_ease_forwards_0.7s] opacity-0" style={{ animationFillMode: 'forwards' }}>
           <h3 className="text-center font-['Didot','Garamond',serif] text-[1.2rem] tracking-[0.15em] mb-8 uppercase">
-            Quality & Fair Pricing
+            Why Fair Pricing?
           </h3>
           <p className="text-center font-['Yu_Mincho','游明朝',serif] text-[1.1rem] mb-8 leading-relaxed tracking-[0.1em]">
-            無駄な固定費を削る、<br className="md:hidden" />「ベース費用＋成果報酬」のハイブリッド型。
+            初期リスクを極限まで削る、<br className="md:hidden" />「ベース実費＋成果報酬」のハイブリッド型。
           </p>
           <div className="max-w-2xl mx-auto border border-[#333] p-6 bg-[#1a1a1a]">
             <p className="font-['Yu_Mincho','游明朝',serif] text-[0.9rem] text-[#ccc] leading-[2.2] tracking-[0.05em]">
-              GAKU-HUBの法人向けソリューションは、高額な月額固定費をいただく旧来のコンサルティングモデルではありません。<br />
+              GAKU-HUBは、広告宣伝費を使って不特定多数の学生を「買ってくる」エージェントではありません。<br />
+              自らの伴走支援から生まれた、熱量の高いコミュニティ（独自の生態系）をすでに内包しているため、外部への余計なマーケティングコストを完全にカットできています。<br />
               <br />
-              私たちは<span className="text-white font-bold border-b border-[#fff]">「質の高い出会いと、共創実績の創出」</span>にのみコミットします。そのため、最低限のベース伴走費と、実際にプロジェクトやマッチングが成立した際の「成果報酬」を組み合わせた、御社にとってリスクの少ないフェアな料金体系を採用しています。
+              だからこそ、出会いの場に対する<span className="text-white font-bold border-b border-[#fff]">初期費用（固定費）は実費レベルに抑え、「実際に成果が生まれた時のみ」適正な報酬をいただく</span>という、御社にとって最もリスクの少ないフェアな料金体系を実現しています。
             </p>
           </div>
         </div>
@@ -122,7 +136,7 @@ export default function PartnerProgram() {
         <div className="text-center mt-24 animate-[fadeIn_1s_ease_forwards_0.9s] opacity-0" style={{ animationFillMode: 'forwards' }}>
           <Link 
             href="/program" 
-            className="inline-block border-b border-[#111111] pb-1 text-[0.85rem] tracking-[0.1em] text-[#111111] font-['Didot','Garamond',serif] hover:text-[#141d58] hover:border-[#141d58] transition-colors duration-300"
+            className="inline-block border border-[#111111] px-[3rem] py-[1rem] text-[0.9rem] tracking-[0.1em] text-[#111111] font-['Didot','Garamond',serif] hover:bg-[#141d58] hover:border-[#141d58] hover:text-white transition-all duration-500"
           >
             Back to Program Hub
           </Link>
