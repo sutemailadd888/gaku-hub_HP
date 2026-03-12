@@ -1,7 +1,7 @@
 "use client";
 import Link from 'next/link';
 
-export default function ServicePage() {
+export default function Service() {
   return (
     <div className="min-h-screen bg-[#FAFAFA] pt-32 pb-24 px-[5%] selection:bg-[#141d58] selection:text-white">
       <div className="max-w-5xl mx-auto">
@@ -14,138 +14,253 @@ export default function ServicePage() {
             SERVICE
           </h1>
           <p className="font-['Didot','Garamond',serif] text-[#888] tracking-[0.2em] text-[0.85rem] uppercase">
-            Our Business Domains
+            Our 3 Domains
           </p>
         </div>
 
-        {/* =========================================
-            2. 導入コピー
-        ========================================= */}
         <div className="text-center mb-24 animate-[fadeIn_1s_ease_forwards_0.2s] opacity-0" style={{ animationFillMode: 'forwards' }}>
-          <p className="font-['Yu_Mincho','游明朝',serif] text-[1.05rem] md:text-[1.15rem] tracking-[0.1em] text-[#111111] leading-relaxed mb-8">
-            GAKU-HUBは、次世代の熱量を社会実装するためのエコシステムです。<br className="hidden md:block" />
-            「伴走支援」「場づくり」「法人提携」の3つのドメインを通じて、<br className="hidden md:block" />
-            個人から企業まで、最適な共創のカタチを提供します。
+          <p className="font-['Yu_Mincho','游明朝',serif] text-[1.1rem] md:text-[1.3rem] tracking-[0.1em] text-[#111111] leading-relaxed mb-6">
+            GAKU-HUBは「伴走支援」「場づくり」「実行支援」を連動させ、<br className="hidden md:block" />
+            共創を連続的に生み出すエコシステムです。
           </p>
-          <div className="w-[1px] h-12 bg-[#141d58] mx-auto"></div>
+          <div className="w-[1px] h-12 bg-[#141d58] mx-auto mt-8"></div>
         </div>
 
         {/* =========================================
-            3. 事業ドメイン一覧
+            3. 3つの事業ドメイン（完全マスター版）
         ========================================= */}
-        <div className="flex flex-col gap-24 mb-24">
-
-          {/* -----------------------------------------
-              Domain 01: Incubation (伴走支援)
-          ----------------------------------------- */}
+        <div className="flex flex-col gap-32 mb-32">
+          
+          {/* =========================================
+              Domain 01: INCUBATION
+          ========================================= */}
           <div className="animate-[fadeIn_1s_ease_forwards_0.3s] opacity-0" style={{ animationFillMode: 'forwards' }}>
-            <div className="flex flex-col md:flex-row gap-8 items-start">
-              <div className="md:w-1/3">
-                <span className="font-['Didot','Garamond',serif] text-[#141d58] tracking-[0.2em] text-[0.85rem] uppercase block mb-2">Domain 01</span>
-                <h2 className="font-['Didot','Garamond',serif] text-[2rem] tracking-[0.1em] text-[#111111] mb-4">Incubation</h2>
-                <p className="font-['Yu_Mincho','游明朝',serif] text-[1rem] text-[#111111] font-bold tracking-[0.05em] mb-4">次世代のプロジェクト創出・伴走支援</p>
-                <p className="font-['Yu_Mincho','游明朝',serif] text-[0.9rem] text-[#555] leading-relaxed">
-                  学生や若手社会人の「やりたい」を、企画の壁打ちから社会実装まで二人三脚で伴走します。リスクを抑えて挑戦できるインフラを提供します。
+            {/* Header Area */}
+            <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-start mb-16">
+              <div className="w-full md:w-1/2 order-2 md:order-1">
+                <span className="font-['Didot','Garamond',serif] text-[3rem] text-[#e0e0e0] block mb-2 leading-none">01</span>
+                <h2 className="font-['Didot','Garamond',serif] text-[1.8rem] md:text-[2.2rem] tracking-[0.1em] text-[#111111] mb-2 uppercase">Incubation</h2>
+                <h3 className="font-['Yu_Mincho','游明朝',serif] text-[1rem] tracking-[0.1em] text-[#141d58] mb-6 font-normal">個人の伴走支援・プロジェクト創出</h3>
+                
+                <p className="font-['Yu_Mincho','游明朝',serif] text-[0.95rem] text-[#555] leading-[2.2] tracking-[0.08em] mb-6">
+                  「想い」を起点に、個人のプロジェクトを社会実装へと導くクローズドなコンサルティング領域。GAKU-HUBは「Co-Founder（共同創業者）」的立ち位置で、0→1から1→10までフェーズを問わず二人三脚で伴走します。
                 </p>
-              </div>
-              
-              <div className="md:w-2/3 w-full bg-white border border-[#e0e0e0] p-8 md:p-10">
-                <ul className="flex flex-col gap-8">
-                  <li className="border-b border-[#f5f5f5] pb-6 last:border-0 last:pb-0">
-                    <h4 className="font-['Yu_Mincho','游明朝',serif] text-[1.05rem] text-[#111111] mb-2 tracking-[0.05em]">1on1 メンタリング（ゼロイチ壁打ち）</h4>
-                    <p className="font-['Yu_Mincho','游明朝',serif] text-[0.85rem] text-[#666] leading-relaxed">専属メンターによる定期的な壁打ちセッション。熱量の言語化、ターゲット設定、プロジェクトのロードマップ策定など、初期の立ち上げをサポートします。</p>
-                  </li>
-                  <li className="border-b border-[#f5f5f5] pb-6 last:border-0 last:pb-0">
-                    <h4 className="font-['Yu_Mincho','游明朝',serif] text-[1.05rem] text-[#111111] mb-2 tracking-[0.05em]">共創プロジェクト・パッケージ</h4>
-                    <p className="font-['Yu_Mincho','游明朝',serif] text-[0.85rem] text-[#666] leading-relaxed">イベントやブランド立ち上げに必要な「企画・集客・会場手配」をオールインワンで提供。チケットバック制を採用し、実質ゼロリスクでの挑戦を可能にします。</p>
-                  </li>
-                </ul>
-                <div className="mt-8 pt-6 border-t border-[#e0e0e0]">
-                  <Link href="/program/challenger" className="font-['Didot','Garamond',serif] text-[0.85rem] text-[#141d58] tracking-[0.1em] hover:opacity-70 transition-opacity flex items-center gap-2">
-                    View Incubation Program <span>→</span>
-                  </Link>
+                <div className="border-t border-[#e0e0e0] pt-4">
+                  <span className="text-[0.75rem] tracking-[0.1em] text-[#111111] uppercase block mb-1">Target</span>
+                  <span className="font-['Yu_Mincho','游明朝',serif] text-[0.85rem] text-[#666] tracking-[0.05em]">プロジェクトを社会実装したい個人・学生・団体</span>
                 </div>
+              </div>
+              <div className="w-full md:w-1/2 order-1 md:order-2 group overflow-hidden">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="https://placehold.co/800x500/eeeeee/999999?text=Incubation" alt="Incubation" className="w-full h-auto grayscale group-hover:grayscale-0 transition-all duration-[0.8s] ease-[cubic-bezier(0.4,0,0.2,1)]" />
+              </div>
+            </div>
+
+            {/* Menu List (Minimal Design) */}
+            <div className="max-w-4xl mx-auto">
+              <h4 className="font-['Didot','Garamond',serif] text-[0.85rem] tracking-[0.15em] text-[#111111] mb-6 uppercase border-b border-[#111111] pb-2 inline-block">Support Menu</h4>
+              
+              <div className="flex flex-col border-t border-[#e0e0e0]">
+                
+                {/* Menu Item */}
+                <div className="border-b border-[#e0e0e0] py-8">
+                  <div className="flex flex-col md:flex-row md:justify-between md:items-baseline mb-3">
+                    <h5 className="font-['Yu_Mincho','游明朝',serif] text-[1.05rem] text-[#111111] tracking-[0.05em]">GAKU-HUB 共創プロジェクトパッケージ</h5>
+                    <div className="font-['Didot','Garamond',serif] text-[1.1rem] text-[#141d58] mt-2 md:mt-0 tracking-[0.05em]">
+                      実質 ¥0〜 <span className="text-[0.75rem] text-[#888] font-['Yu_Mincho','游明朝',serif]">（※基本料金 ¥15,000）</span>
+                    </div>
+                  </div>
+                  <p className="font-['Yu_Mincho','游明朝',serif] text-[0.9rem] text-[#555] leading-relaxed mb-3">
+                    企画立案から集客サポート、イベント開催までのフルサポートとインフラ提供。参加費売上でパッケージ料金を相殺する独自の「チケットバック制」により、初期費用・自腹リスクゼロからの挑戦が可能です。
+                  </p>
+                </div>
+
+                {/* Menu Item */}
+                <div className="border-b border-[#e0e0e0] py-8">
+                  <div className="flex flex-col md:flex-row md:justify-between md:items-baseline mb-3">
+                    <h5 className="font-['Yu_Mincho','游明朝',serif] text-[1.05rem] text-[#111111] tracking-[0.05em]">ゼロイチ壁打ち 1on1セッション</h5>
+                    <div className="font-['Didot','Garamond',serif] text-[1.1rem] text-[#141d58] mt-2 md:mt-0 tracking-[0.05em]">
+                      ¥1,000〜 <span className="text-[0.75rem] text-[#888]">/ 60min</span>
+                    </div>
+                  </div>
+                  <p className="font-['Yu_Mincho','游明朝',serif] text-[0.9rem] text-[#555] leading-relaxed mb-3">
+                    「なんとなくやりたいこと」を言語化し、具体的なプロジェクトの設計図を作るためのメンタリング。より密な伴走を希望される方には、Standard Member（月額 ¥3,000）での継続相談もご用意しています。
+                  </p>
+                  <p className="font-['Yu_Mincho','游明朝',serif] text-[0.8rem] text-[#888] leading-relaxed">
+                    ※ 初回相談は無料。また、共創パッケージ利用者およびオフィシャルパートナー所属メンバーは【無料】でご利用いただけます。
+                  </p>
+                </div>
+
               </div>
             </div>
           </div>
 
-          {/* -----------------------------------------
-              Domain 02: Community (場づくり)
-          ----------------------------------------- */}
+          {/* =========================================
+              Domain 02: COMMUNITY & EVENT
+          ========================================= */}
           <div className="animate-[fadeIn_1s_ease_forwards_0.4s] opacity-0" style={{ animationFillMode: 'forwards' }}>
-            <div className="flex flex-col md:flex-row gap-8 items-start">
-              <div className="md:w-1/3 order-1 md:order-2">
-                <span className="font-['Didot','Garamond',serif] text-[#141d58] tracking-[0.2em] text-[0.85rem] uppercase block mb-2">Domain 02</span>
-                <h2 className="font-['Didot','Garamond',serif] text-[2rem] tracking-[0.1em] text-[#111111] mb-4">Community</h2>
-                <p className="font-['Yu_Mincho','游明朝',serif] text-[1rem] text-[#111111] font-bold tracking-[0.05em] mb-4">共創を生むエコシステム・場づくり</p>
-                <p className="font-['Yu_Mincho','游明朝',serif] text-[0.9rem] text-[#555] leading-relaxed">
-                  熱量を持つ同世代や、それを支援する社会人が交わる「結節点」としてのコミュニティを、オンライン・オフラインの両軸で運営しています。
+            {/* Header Area */}
+            <div className="flex flex-col md:flex-row-reverse gap-8 md:gap-16 items-start mb-16">
+              <div className="w-full md:w-1/2 order-2 md:order-1">
+                <span className="font-['Didot','Garamond',serif] text-[3rem] text-[#e0e0e0] block mb-2 leading-none">02</span>
+                <h2 className="font-['Didot','Garamond',serif] text-[1.8rem] md:text-[2.2rem] tracking-[0.1em] text-[#111111] mb-2 uppercase">Community & Event</h2>
+                <h3 className="font-['Yu_Mincho','游明朝',serif] text-[1rem] tracking-[0.1em] text-[#141d58] mb-6 font-normal">共創プラットフォームの運営</h3>
+                
+                <p className="font-['Yu_Mincho','游明朝',serif] text-[0.95rem] text-[#555] leading-[2.2] tracking-[0.08em] mb-6">
+                  Incubationで生まれたプロジェクトの実証実験の場であり、多様な知見が交差するオープンな交流領域。熱量を持った次世代と、彼らを支援する企業とが自然に交わる「結節点」として機能します。
                 </p>
-              </div>
-              
-              <div className="md:w-2/3 w-full bg-white border border-[#e0e0e0] p-8 md:p-10 order-2 md:order-1">
-                <ul className="flex flex-col gap-8">
-                  <li className="border-b border-[#f5f5f5] pb-6 last:border-0 last:pb-0">
-                    <h4 className="font-['Yu_Mincho','游明朝',serif] text-[1.05rem] text-[#111111] mb-2 tracking-[0.05em]">メンバーシップ・コミュニティ運営</h4>
-                    <p className="font-['Yu_Mincho','游明朝',serif] text-[0.85rem] text-[#666] leading-relaxed">
-                      無料から参加できる「Starter Member（公式Discord）」や、より実践的な活動を行う「Standard Member」など、階層に応じたオープンな交流プラットフォームを提供しています。
-                    </p>
-                  </li>
-                  <li className="border-b border-[#f5f5f5] pb-6 last:border-0 last:pb-0">
-                    <h4 className="font-['Yu_Mincho','游明朝',serif] text-[1.05rem] text-[#111111] mb-2 tracking-[0.05em]">オフライン拠点の連携・イベント開催</h4>
-                    <p className="font-['Yu_Mincho','游明朝',serif] text-[0.85rem] text-[#666] leading-relaxed">提携するカフェバー（Blooming Kitchen等）や共創スペースを活用し、リアルな熱量が交わるポップアップやミートアップイベントを定期的に開催・支援しています。</p>
-                  </li>
-                </ul>
-                <div className="mt-8 pt-6 border-t border-[#e0e0e0]">
-                  <a href="https://discord.com/" target="_blank" rel="noopener noreferrer" className="font-['Didot','Garamond',serif] text-[0.85rem] text-[#141d58] tracking-[0.1em] hover:opacity-70 transition-opacity flex items-center gap-2">
-                    Join Starter Member (Discord) <span>→</span>
-                  </a>
+                <div className="border-t border-[#e0e0e0] pt-4">
+                  <span className="text-[0.75rem] tracking-[0.1em] text-[#111111] uppercase block mb-1">Target</span>
+                  <span className="font-['Yu_Mincho','游明朝',serif] text-[0.85rem] text-[#666] tracking-[0.05em]">一般参加者（学生・社会人）、コミュニティへ協賛したい企業様</span>
                 </div>
+              </div>
+              <div className="w-full md:w-1/2 order-1 md:order-2 group overflow-hidden">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="https://placehold.co/800x500/eeeeee/999999?text=Community+Event" alt="Community & Event" className="w-full h-auto grayscale group-hover:grayscale-0 transition-all duration-[0.8s] ease-[cubic-bezier(0.4,0,0.2,1)]" />
+              </div>
+            </div>
+
+            {/* Menu List (Minimal Design) */}
+            <div className="max-w-4xl mx-auto">
+              <h4 className="font-['Didot','Garamond',serif] text-[0.85rem] tracking-[0.15em] text-[#111111] mb-6 uppercase border-b border-[#111111] pb-2 inline-block">Event & Sponsor Menu</h4>
+              
+              <div className="flex flex-col border-t border-[#e0e0e0]">
+                
+                {/* Menu Item */}
+                <div className="border-b border-[#e0e0e0] py-8">
+                  <div className="flex flex-col md:flex-row md:justify-between md:items-baseline mb-3">
+                    <h5 className="font-['Yu_Mincho','游明朝',serif] text-[1.05rem] text-[#111111] tracking-[0.05em]">コミュニティ参加（Starter Member登録）</h5>
+                    <div className="font-['Didot','Garamond',serif] text-[1.1rem] text-[#141d58] mt-2 md:mt-0 tracking-[0.05em]">
+                      ¥0 <span className="text-[0.75rem] text-[#888] font-['Didot','Garamond',serif]">/ Free</span>
+                    </div>
+                  </div>
+                  <p className="font-['Yu_Mincho','游明朝',serif] text-[0.9rem] text-[#555] leading-relaxed mb-3">
+                    GAKU-HUBの公式Discordコミュニティへの参加。熱量を持つ同世代や社会人とオンラインで繋がり、イベントの先行案内やプロジェクトの仲間探しなど、日常的な交流が可能です。
+                  </p>
+                </div>
+
+                {/* Menu Item */}
+                <div className="border-b border-[#e0e0e0] py-8">
+                  <div className="flex flex-col md:flex-row md:justify-between md:items-baseline mb-3">
+                    <h5 className="font-['Yu_Mincho','游明朝',serif] text-[1.05rem] text-[#111111] tracking-[0.05em]">MEETUP / EVENT 一般参加</h5>
+                    <div className="font-['Didot','Garamond',serif] text-[1.1rem] text-[#141d58] mt-2 md:mt-0 tracking-[0.05em]">
+                      ¥1,000〜 <span className="text-[0.75rem] text-[#888]">/ 1event</span>
+                    </div>
+                  </div>
+                  <p className="font-['Yu_Mincho','游明朝',serif] text-[0.9rem] text-[#555] leading-relaxed mb-3">
+                    多様な価値観と出会い、自身の熱量を探るトークセッションやワークショップ等への参加権。（※企画・会場により価格は変動します）
+                  </p>
+                </div>
+
+                {/* Menu Item */}
+                <div className="border-b border-[#e0e0e0] py-8">
+                  <div className="flex flex-col md:flex-row md:justify-between md:items-baseline mb-3">
+                    <h5 className="font-['Yu_Mincho','游明朝',serif] text-[1.05rem] text-[#111111] tracking-[0.05em]">公式スポンサー登録（純協賛）</h5>
+                    <div className="font-['Didot','Garamond',serif] text-[1.1rem] text-[#141d58] mt-2 md:mt-0 tracking-[0.05em]">
+                      初期登録料 ¥5,000
+                    </div>
+                  </div>
+                  <p className="font-['Yu_Mincho','游明朝',serif] text-[0.9rem] text-[#555] leading-relaxed mb-3">
+                    「次世代の挑戦を応援したい」という企業様向けのゲートウェイ。当サイト上に永続的に企業ロゴを掲載し、必要に応じて「PR枠・採用マッチング（Domain 03）」などの実働メニューへ優待価格でアクセスいただけます。
+                  </p>
+                  <p className="font-['Yu_Mincho','游明朝',serif] text-[0.8rem] text-[#888] leading-relaxed">
+                    ※ 現在、初期協賛企業様限定で「初期登録料」を無料免除しております（月額等のランニングコストは不要です）。
+                  </p>
+                </div>
+
+                {/* Menu Item */}
+                <div className="border-b border-[#e0e0e0] py-8">
+                  <div className="flex flex-col md:flex-row md:justify-between md:items-baseline mb-3">
+                    <h5 className="font-['Yu_Mincho','游明朝',serif] text-[1.05rem] text-[#111111] tracking-[0.05em]">カスタム・イベント共催（法人向け）</h5>
+                    <div className="font-['Didot','Garamond',serif] text-[1.1rem] text-[#141d58] mt-2 md:mt-0 tracking-[0.05em]">
+                      企画費 ¥10,000〜 <span className="text-[0.75rem] text-[#888]">＋ 成果報酬</span>
+                    </div>
+                  </div>
+                  <p className="font-['Yu_Mincho','游明朝',serif] text-[0.9rem] text-[#555] leading-relaxed mb-3">
+                    企業の課題（採用・新規事業等）に合わせ、コミュニティを巻き込んだ独自イベントをゼロから企画。無理な人数合わせはせず、熱量と条件（特定年度卒等）に合致したターゲットのみを集客する質重視のモデルです。
+                  </p>
+                </div>
+
               </div>
             </div>
           </div>
 
-          {/* -----------------------------------------
-              Domain 03: Alliance (法人提携・支援)
-          ----------------------------------------- */}
+          {/* =========================================
+              Domain 03: CORPORATE PARTNERSHIP
+          ========================================= */}
           <div className="animate-[fadeIn_1s_ease_forwards_0.5s] opacity-0" style={{ animationFillMode: 'forwards' }}>
-            <div className="flex flex-col md:flex-row gap-8 items-start">
-              <div className="md:w-1/3">
-                <span className="font-['Didot','Garamond',serif] text-[#141d58] tracking-[0.2em] text-[0.85rem] uppercase block mb-2">Domain 03</span>
-                <h2 className="font-['Didot','Garamond',serif] text-[2rem] tracking-[0.1em] text-[#111111] mb-4">Alliance</h2>
-                <p className="font-['Yu_Mincho','游明朝',serif] text-[1rem] text-[#111111] font-bold tracking-[0.05em] mb-4">法人向けアライアンス・ソリューション</p>
-                <p className="font-['Yu_Mincho','游明朝',serif] text-[0.9rem] text-[#555] leading-relaxed">
-                  GAKU-HUBのエコシステムを活用し、企業様の「採用」「新規事業」「共創施設運営」に関する課題を、無駄な固定費を省いたフェアな座組みで解決します。
+            {/* Header Area */}
+            <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-start mb-16">
+              <div className="w-full md:w-1/2 order-2 md:order-1">
+                <span className="font-['Didot','Garamond',serif] text-[3rem] text-[#e0e0e0] block mb-2 leading-none">03</span>
+                <h2 className="font-['Didot','Garamond',serif] text-[1.8rem] md:text-[2.2rem] tracking-[0.1em] text-[#111111] mb-2 uppercase">Corporate Partnership</h2>
+                <h3 className="font-['Yu_Mincho','游明朝',serif] text-[1rem] tracking-[0.1em] text-[#141d58] mb-6 font-normal">法人向け共創・採用ソリューション</h3>
+                
+                <p className="font-['Yu_Mincho','游明朝',serif] text-[0.95rem] text-[#555] leading-[2.2] tracking-[0.08em] mb-6">
+                  GAKU-HUBのエコシステム（企画・集客・学生プール）をフル活用し、他団体や法人のビジネス課題をダイレクトに解決するBtoBアライアンス領域。無駄な固定費を省いた「ベース＋成果報酬型」のフェアな座組みでプロジェクトを実行します。
                 </p>
+                <div className="border-t border-[#e0e0e0] pt-4">
+                  <span className="text-[0.75rem] tracking-[0.1em] text-[#111111] uppercase block mb-1">Target</span>
+                  <span className="font-['Yu_Mincho','游明朝',serif] text-[0.85rem] text-[#666] tracking-[0.05em]">HR事業者、共創施設、企業の新規事業・採用担当様</span>
+                </div>
               </div>
+              <div className="w-full md:w-1/2 order-1 md:order-2 group overflow-hidden">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="https://placehold.co/800x500/eeeeee/999999?text=Corporate+Partnership" alt="Corporate Partnership" className="w-full h-auto grayscale group-hover:grayscale-0 transition-all duration-[0.8s] ease-[cubic-bezier(0.4,0,0.2,1)]" />
+              </div>
+            </div>
+            
+            {/* Menu List (Minimal Design) */}
+            <div className="max-w-4xl mx-auto">
+              <h4 className="font-['Didot','Garamond',serif] text-[0.85rem] tracking-[0.15em] text-[#111111] mb-6 uppercase border-b border-[#111111] pb-2 inline-block">Alliance & Solution Menu</h4>
               
-              <div className="md:w-2/3 w-full bg-white border border-[#e0e0e0] p-8 md:p-10">
-                <ul className="flex flex-col gap-8">
-                  <li className="border-b border-[#f5f5f5] pb-6 last:border-0 last:pb-0">
-                    <h4 className="font-['Yu_Mincho','游明朝',serif] text-[1.05rem] text-[#111111] mb-2 tracking-[0.05em]">パートナー＆スポンサー提携</h4>
-                    <p className="font-['Yu_Mincho','游明朝',serif] text-[0.85rem] text-[#666] leading-relaxed">
-                      インフラを共有する「オフィシャルパートナー」や、月額不要で優待メニューにアクセスできる「公式スポンサー」として、共に次世代を支援する協業体制を構築します。
-                    </p>
-                    <Link href="/partners" className="inline-block mt-3 font-['Didot','Garamond',serif] text-[0.8rem] text-[#141d58] tracking-[0.1em] hover:opacity-70 transition-opacity border-b border-[#141d58] pb-0.5">
-                      View Partnership Details
-                    </Link>
-                  </li>
-                  <li className="border-b border-[#f5f5f5] pb-6 last:border-0 last:pb-0">
-                    <h4 className="font-['Yu_Mincho','游明朝',serif] text-[1.05rem] text-[#111111] mb-2 tracking-[0.05em]">イベントPR枠・採用マッチング</h4>
-                    <p className="font-['Yu_Mincho','游明朝',serif] text-[0.85rem] text-[#666] leading-relaxed">
-                      特定のターゲット層が集まるイベントへの登壇枠や、優秀層のダイレクトリクルーティングを提供します。ベース実費＋成果報酬の低リスクなモデルを採用しています。
-                    </p>
-                  </li>
-                  <li className="border-b border-[#f5f5f5] pb-6 last:border-0 last:pb-0">
-                    <h4 className="font-['Yu_Mincho','游明朝',serif] text-[1.05rem] text-[#111111] mb-2 tracking-[0.05em]">共創施設・新規事業 実行支援（PMO）</h4>
-                    <p className="font-['Yu_Mincho','游明朝',serif] text-[0.85rem] text-[#666] leading-relaxed">
-                      共創施設の運営や新規事業の立ち上げに、外部の実行部隊（PMO）として参画。プロフェッショナルなリソースを提供し、共創事例の創出にコミットします。
-                    </p>
-                    <Link href="/program/company" className="inline-block mt-3 font-['Didot','Garamond',serif] text-[0.8rem] text-[#141d58] tracking-[0.1em] hover:opacity-70 transition-opacity border-b border-[#141d58] pb-0.5">
-                      View Corporate Solutions
-                    </Link>
-                  </li>
-                </ul>
+              <div className="flex flex-col border-t border-[#e0e0e0]">
+                
+                {/* Menu Item */}
+                <div className="border-b border-[#e0e0e0] py-8">
+                  <div className="flex flex-col md:flex-row md:justify-between md:items-baseline mb-3">
+                    <h5 className="font-['Yu_Mincho','游明朝',serif] text-[1.05rem] text-[#111111] tracking-[0.05em]">オフィシャルパートナー提携（協業アライアンス）</h5>
+                    <div className="font-['Didot','Garamond',serif] text-[1.1rem] text-[#141d58] mt-2 md:mt-0 tracking-[0.05em]">
+                      初期登録料 ¥3,000
+                    </div>
+                  </div>
+                  <p className="font-['Yu_Mincho','游明朝',serif] text-[0.9rem] text-[#555] leading-relaxed mb-3">
+                    学生団体やHR企業様との共同戦線。「共創プロジェクト枠」のメンバー無料利用や、GAKU-HUBのインフラを自社のコンテンツやアップセル商材として相互活用できる、最上位のアライアンスです。
+                  </p>
+                  <p className="font-['Yu_Mincho','游明朝',serif] text-[0.8rem] text-[#888] leading-relaxed">
+                    ※ 現在、初期パートナー限定で登録料を【無料免除】しております。
+                  </p>
+                </div>
+
+                {/* Menu Item */}
+                <div className="border-b border-[#e0e0e0] py-8">
+                  <div className="flex flex-col md:flex-row md:justify-between md:items-baseline mb-3">
+                    <h5 className="font-['Yu_Mincho','游明朝',serif] text-[1.05rem] text-[#111111] tracking-[0.05em]">イベントPR枠・採用マッチング</h5>
+                    <div className="font-['Didot','Garamond',serif] text-[1.1rem] text-[#141d58] mt-2 md:mt-0 tracking-[0.05em]">
+                      ベース費用 ¥5,000〜 <span className="text-[0.75rem] text-[#888]">＋ 成果報酬</span>
+                    </div>
+                  </div>
+                  <p className="font-['Yu_Mincho','游明朝',serif] text-[0.9rem] text-[#555] leading-relaxed mb-3">
+                    御社のターゲットに合致する「熱量の高い少数精鋭」をGAKU-HUBがキュレーションし、イベントのピッチ枠などでダイレクトに引き合わせます。無駄な広告費を削り、実際にマッチングが成立した際のみ報酬をいただく完全フェアなモデルです。
+                  </p>
+                </div>
+
+                {/* Menu Item */}
+                <div className="border-b border-[#e0e0e0] py-8">
+                  <div className="flex flex-col md:flex-row md:justify-between md:items-baseline mb-3">
+                    <h5 className="font-['Yu_Mincho','游明朝',serif] text-[1.05rem] text-[#111111] tracking-[0.05em]">共創PMO（施設・新規事業向け 実行支援）</h5>
+                    <div className="font-['Didot','Garamond',serif] text-[1.1rem] text-[#141d58] mt-2 md:mt-0 tracking-[0.05em]">
+                      定価 月額 ¥100,000〜 <span className="text-[0.75rem] text-[#888]">＋ 成果報酬</span>
+                    </div>
+                  </div>
+                  <p className="font-['Yu_Mincho','游明朝',serif] text-[0.9rem] text-[#555] leading-relaxed mb-3">
+                    「場はあるが実績が生まれない」共創施設などに、外部の実行部隊（PMO）として入り込みます。コンサルティング会社のような高額な固定費は頂かず、質の高い共創事例の創出（成果）にコミットします。
+                  </p>
+                  <p className="font-['Yu_Mincho','游明朝',serif] text-[0.8rem] text-[#888] leading-relaxed">
+                    ※ 現在、低リスクでスタートできる「PoC（お試し）特別価格：月額 ¥30,000〜」をご案内中です。
+                  </p>
+                </div>
+
               </div>
             </div>
           </div>
