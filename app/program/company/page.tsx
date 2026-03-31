@@ -17,7 +17,7 @@ export default function CorporateSolutions() {
             次世代の熱量に、<br className="md:hidden" />最短距離でアクセスする。
           </h1>
           <p className="font-['Yu_Mincho','游明朝',serif] text-[0.95rem] text-[#555] tracking-[0.08em] mt-8 leading-[2]">
-            法人・共創施設・HR事業者様向け<br />
+            事業会社・共創施設・HR事業者様向け<br />
             アライアンス＆ソリューション
           </p>
         </div>
@@ -30,13 +30,13 @@ export default function CorporateSolutions() {
             「人数合わせ」の集客は、もう終わりにしませんか。
           </h2>
           <p className="font-['Yu_Mincho','游明朝',serif] text-[0.95rem] text-[#555] leading-[2.4] tracking-[0.08em] md:text-center max-w-3xl mx-auto">
-            企業が抱える「採用」や「新規事業・施設運営」の課題。それらを解決するために必要なのは、不特定多数の母集団ではなく、自らリスクを取って行動できる「熱量の高い次世代人材」です。<br className="hidden md:block" />
+            企業が抱える「事業推進」や「新規事業開発」「採用」などの課題。それらを解決するために必要なのは、不特定多数の母集団ではなく、自らリスクを取って行動できる「熱量の高い次世代人材」です。<br className="hidden md:block" />
             GAKU-HUBは、伴走支援を通じて発掘・育成した優秀なチャレンジャー層をプールする独自のエコシステムを持っています。御社の課題に合わせ、最も精度の高いマッチングと共創の仕組みをご提案します。
           </p>
         </div>
 
         {/* =========================================
-            3. ソリューションメニュー（金額と見せ方の改定）
+            3. ソリューションメニュー
         ========================================= */}
         <div className="mb-24">
           <h3 className="text-center font-['Didot','Garamond',serif] text-[1.2rem] tracking-[0.15em] text-[#111111] mb-12 uppercase animate-[fadeIn_1s_ease_forwards_0.3s] opacity-0" style={{ animationFillMode: 'forwards' }}>
@@ -45,10 +45,10 @@ export default function CorporateSolutions() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
             
-            {/* Menu 1: HR Support (PR枠・マッチング) */}
+            {/* Menu 1: Matchmaking */}
             <div className="bg-white border border-[#e0e0e0] p-8 md:p-12 transition-colors duration-500 hover:border-[#141d58] animate-[fadeIn_1s_ease_forwards_0.4s] opacity-0 group" style={{ animationFillMode: 'forwards' }}>
               <div className="font-['Didot','Garamond',serif] text-[1.5rem] text-[#e0e0e0] mb-6 group-hover:text-[#141d58] transition-colors duration-500">01</div>
-              <h4 className="font-['Yu_Mincho','游明朝',serif] text-[1.2rem] text-[#111111] mb-4">イベントPR枠・採用マッチング</h4>
+              <h4 className="font-['Yu_Mincho','游明朝',serif] text-[1.2rem] text-[#111111] mb-4">イベントPR枠・事業マッチング</h4>
               
               <div className="mb-6">
                 <div className="font-['Didot','Garamond',serif] text-[1.1rem] text-[#111111] tracking-[0.05em]">
@@ -61,12 +61,12 @@ export default function CorporateSolutions() {
               </p>
               <div className="bg-[#fafafa] p-4 border border-[#eee]">
                 <p className="font-['Yu_Mincho','游明朝',serif] text-[0.8rem] text-[#666] leading-relaxed">
-                  ※特定の年次や人数の確約ができないからこそ、無駄な広告費や高額な登壇費はいただきません。ベース費用は実費レベルに抑え、「実際に採用やマッチングが成立した際」のみ報酬をいただく完全フェアなモデルです。
+                  ※特定の年次や人数の確約ができないからこそ、無駄な広告費や高額な登壇費はいただきません。ベース費用は実費レベルに抑え、「実際に事業連携や採用などのマッチングが成立した際」のみ報酬をいただく完全フェアなモデルです。
                 </p>
               </div>
             </div>
 
-            {/* Menu 2: Co-creation PMO (実行支援) */}
+            {/* Menu 2: Co-creation PMO */}
             <div className="bg-white border border-[#e0e0e0] p-8 md:p-12 transition-colors duration-500 hover:border-[#141d58] animate-[fadeIn_1s_ease_forwards_0.5s] opacity-0 group" style={{ animationFillMode: 'forwards' }}>
               <div className="font-['Didot','Garamond',serif] text-[1.5rem] text-[#e0e0e0] mb-6 group-hover:text-[#141d58] transition-colors duration-500">02</div>
               <h4 className="font-['Yu_Mincho','游明朝',serif] text-[1.2rem] text-[#111111] mb-4">共創施設・新規事業 実行支援 (PMO)</h4>
@@ -75,7 +75,6 @@ export default function CorporateSolutions() {
                 <div className="font-['Didot','Garamond',serif] text-[1.1rem] text-[#111111] tracking-[0.05em]">
                   定価 月額 ¥100,000〜 <span className="font-['Yu_Mincho','游明朝',serif] text-[#141d58] text-[0.8rem] ml-1">＋ 成果報酬</span>
                 </div>
-                {/* ▼ トライアル枠の見せ方（上品なバッジ風） ▼ */}
                 <div className="inline-block mt-3 bg-[#f5f5f5] border border-[#e0e0e0] px-3 py-1.5 text-[0.8rem] text-[#141d58] font-['Yu_Mincho','游明朝',serif] tracking-[0.05em]">
                   現在、初期導入向けの「PoC（お試し）特別価格：月額 ¥30,000〜」をご案内中です。
                 </div>

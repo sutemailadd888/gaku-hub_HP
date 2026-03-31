@@ -107,11 +107,11 @@ export default function Service() {
                 <h3 className="font-['Yu_Mincho','游明朝',serif] text-[1rem] tracking-[0.1em] text-[#141d58] mb-6 font-normal">共創プラットフォームの運営</h3>
                 
                 <p className="font-['Yu_Mincho','游明朝',serif] text-[0.95rem] text-[#555] leading-[2.2] tracking-[0.08em] mb-6">
-                  Incubationで生まれたプロジェクトの実証実験の場であり、多様な知見が交差するオープンな交流領域。熱量を持った次世代と、彼らを支援する企業とが自然に交わる「結節点」として機能します。
+                  Incubationで生まれたプロジェクトの実証実験の場であり、多様な知見が交差するオープンな交流領域。また、自社の事業推進、PR、新規事業開発、そして採用など、多様な目的で学生コミュニティ（次世代の熱量）に直接アプローチしたい企業のための直販接点として機能します。
                 </p>
                 <div className="border-t border-[#e0e0e0] pt-4">
                   <span className="text-[0.75rem] tracking-[0.1em] text-[#111111] uppercase block mb-1">Target</span>
-                  <span className="font-['Yu_Mincho','游明朝',serif] text-[0.85rem] text-[#666] tracking-[0.05em]">一般参加者（学生・社会人）、コミュニティへ協賛したい企業様</span>
+                  <span className="font-['Yu_Mincho','游明朝',serif] text-[0.85rem] text-[#666] tracking-[0.05em]">一般参加者（学生・社会人）、多様な出会いやPRを求める企業様</span>
                 </div>
               </div>
               <div className="w-full md:w-1/2 order-1 md:order-2 group overflow-hidden">
@@ -161,10 +161,23 @@ export default function Service() {
                     </div>
                   </div>
                   <p className="font-['Yu_Mincho','游明朝',serif] text-[0.9rem] text-[#555] leading-relaxed mb-3">
-                    「次世代の挑戦を応援したい」という企業様向けのゲートウェイ。当サイト上に永続的に企業ロゴを掲載し、必要に応じて「PR枠・採用マッチング（Domain 03）」などの実働メニューへ優待価格でアクセスいただけます。
+                    「次世代の挑戦を応援したい」という企業様向けのゲートウェイ。当サイト上に永続的に企業ロゴを掲載し、必要に応じて「PR枠・マッチング（Domain 03）」などの実働メニューへ優待価格でアクセスいただけます。
                   </p>
                   <p className="font-['Yu_Mincho','游明朝',serif] text-[0.8rem] text-[#888] leading-relaxed">
                     ※ 現在、初期協賛企業様限定で「初期登録料」を無料免除しております（月額等のランニングコストは不要です）。
+                  </p>
+                </div>
+
+                {/* Menu Item */}
+                <div className="border-b border-[#e0e0e0] py-8">
+                  <div className="flex flex-col md:flex-row md:justify-between md:items-baseline mb-3">
+                    <h5 className="font-['Yu_Mincho','游明朝',serif] text-[1.05rem] text-[#111111] tracking-[0.05em]">イベント内 PRピッチ・マッチング</h5>
+                    <div className="font-['Didot','Garamond',serif] text-[1.1rem] text-[#141d58] mt-2 md:mt-0 tracking-[0.05em]">
+                      登壇費 ¥5,000〜 <span className="text-[0.75rem] text-[#888]">＋ 成果報酬</span>
+                    </div>
+                  </div>
+                  <p className="font-['Yu_Mincho','游明朝',serif] text-[0.9rem] text-[#555] leading-relaxed mb-3">
+                    GAKU-HUB主催イベントごとに、趣旨に最もマッチする登録企業様を抜擢しPR枠をご案内。採用だけでなく、事業のユーザーヒアリングや純粋な営業PRなど、多様な出会いを創出する成果報酬型モデルです。
                   </p>
                 </div>
 
@@ -177,12 +190,11 @@ export default function Service() {
                     </div>
                   </div>
                   <p className="font-['Yu_Mincho','游明朝',serif] text-[0.9rem] text-[#555] leading-relaxed mb-3">
-                    企業の課題（採用・新規事業等）に合わせ、コミュニティを巻き込んだ独自イベントをゼロから企画。無理な人数合わせはせず、熱量と条件（特定年度卒等）に合致したターゲットのみを集客する質重視のモデルです。
+                    企業の課題（営業・マーケティング・採用等）に合わせ、コミュニティを巻き込んだ独自イベントをゼロから企画。無理な人数合わせはせず、熱量と条件に合致したターゲットのみを集客する質重視のモデルです。
                   </p>
                   <div className="bg-[#fafafa] p-4 border border-[#e0e0e0]">
                     <p className="font-['Yu_Mincho','游明朝',serif] text-[0.8rem] text-[#666] leading-relaxed">
-                      ※数百万の費用がかかる大規模な合同説明会とは異なり、最低限の「場づくり」の実費と、採用等のマッチングが成立した際の「成果報酬」を組み合わせた、企業にとってリスクの少ないフェアな座組みです。<br />
-                      （※学生への知見還元を主目的とする社会人ゲスト登壇等の場合は、費用は頂戴しておりません）
+                      ※数百万の費用がかかる大規模な合同説明会とは異なり、最低限の「場づくり」の実費と、マッチングが成立した際の「成果報酬」を組み合わせた、企業にとってリスクの少ないフェアな座組みです。
                     </p>
                   </div>
                 </div>
@@ -200,14 +212,14 @@ export default function Service() {
               <div className="w-full md:w-1/2 order-2 md:order-1">
                 <span className="font-['Didot','Garamond',serif] text-[3rem] text-[#e0e0e0] block mb-2 leading-none">03</span>
                 <h2 className="font-['Didot','Garamond',serif] text-[1.8rem] md:text-[2.2rem] tracking-[0.1em] text-[#111111] mb-2 uppercase">Corporate Partnership</h2>
-                <h3 className="font-['Yu_Mincho','游明朝',serif] text-[1rem] tracking-[0.1em] text-[#141d58] mb-6 font-normal">法人向け共創・採用ソリューション</h3>
+                <h3 className="font-['Yu_Mincho','游明朝',serif] text-[1rem] tracking-[0.1em] text-[#141d58] mb-6 font-normal">法人向け共創・アライアンスソリューション</h3>
                 
                 <p className="font-['Yu_Mincho','游明朝',serif] text-[0.95rem] text-[#555] leading-[2.2] tracking-[0.08em] mb-6">
-                  GAKU-HUBのエコシステム（企画・集客・学生プール）をフル活用し、他団体や法人のビジネス課題をダイレクトに解決するBtoBアライアンス領域。無駄な固定費を省いた「ベース＋成果報酬型」のフェアな座組みでプロジェクトを実行します。
+                  GAKU-HUBのエコシステム（企画・集客・学生プール）をフル活用し、他団体や法人のビジネス課題をダイレクトに解決します。採用という枠組みを超え、「あらゆる共創（出会い）」を創出するBtoBアライアンス領域です。
                 </p>
                 <div className="border-t border-[#e0e0e0] pt-4">
                   <span className="text-[0.75rem] tracking-[0.1em] text-[#111111] uppercase block mb-1">Target</span>
-                  <span className="font-['Yu_Mincho','游明朝',serif] text-[0.85rem] text-[#666] tracking-[0.05em]">HR事業者、共創施設、企業の新規事業・採用担当様</span>
+                  <span className="font-['Yu_Mincho','游明朝',serif] text-[0.85rem] text-[#666] tracking-[0.05em]">事業会社、コミュニティ運営団体、HR事業者、共創施設</span>
                 </div>
               </div>
               <div className="w-full md:w-1/2 order-1 md:order-2 group overflow-hidden">
@@ -231,7 +243,7 @@ export default function Service() {
                     </div>
                   </div>
                   <p className="font-['Yu_Mincho','游明朝',serif] text-[0.9rem] text-[#555] leading-relaxed mb-3">
-                    学生団体やHR企業様との共同戦線。「共創プロジェクト枠」のメンバー無料利用や、GAKU-HUBのインフラを自社のコンテンツやアップセル商材として相互活用できる、最上位のアライアンスです。
+                    学生団体や事業会社様との共同戦線。「共創プロジェクト枠」のメンバー無料利用や、GAKU-HUBのインフラを自社のコンテンツやアップセル商材として相互活用できる、最上位のアライアンスです。
                   </p>
                   <p className="font-['Yu_Mincho','游明朝',serif] text-[0.8rem] text-[#888] leading-relaxed">
                     ※ 現在、初期パートナー限定で登録料を【無料免除】しております。
@@ -241,13 +253,13 @@ export default function Service() {
                 {/* Menu Item */}
                 <div className="border-b border-[#e0e0e0] py-8">
                   <div className="flex flex-col md:flex-row md:justify-between md:items-baseline mb-3">
-                    <h5 className="font-['Yu_Mincho','游明朝',serif] text-[1.05rem] text-[#111111] tracking-[0.05em]">イベントPR枠・採用マッチング</h5>
+                    <h5 className="font-['Yu_Mincho','游明朝',serif] text-[1.05rem] text-[#111111] tracking-[0.05em]">次世代アライアンス＆マッチング支援</h5>
                     <div className="font-['Didot','Garamond',serif] text-[1.1rem] text-[#141d58] mt-2 md:mt-0 tracking-[0.05em]">
-                      ベース費用 ¥5,000〜 <span className="text-[0.75rem] text-[#888]">＋ 成果報酬</span>
+                      卸売・ベース費用 ¥10,000〜 <span className="text-[0.75rem] text-[#888]">＋ 成果報酬</span>
                     </div>
                   </div>
                   <p className="font-['Yu_Mincho','游明朝',serif] text-[0.9rem] text-[#555] leading-relaxed mb-3">
-                    御社のターゲットに合致する「熱量の高い少数精鋭」をGAKU-HUBがキュレーションし、イベントのピッチ枠などでダイレクトに引き合わせます。無駄な広告費を削り、実際にマッチングが成立した際のみ報酬をいただく完全フェアなモデルです。
+                    事業会社の営業・新規事業部門や、HR事業者向けのメニュー。採用ありきではなく、事業PRやマーケティングなど、熱量を持った層とのダイレクトな出会いの仕組みを構築します。
                   </p>
                 </div>
 

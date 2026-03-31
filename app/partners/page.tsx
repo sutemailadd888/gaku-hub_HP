@@ -81,7 +81,6 @@ export default function PartnersPage() {
 
         {/* =========================================
             4. スポンサー募集（Join the Ecosystem）
-            ※枠線を #e0e0e0 に変更し、視認性を向上
         ========================================= */}
         <div className="max-w-4xl mx-auto bg-white border border-[#e0e0e0] p-8 md:p-16 mb-16 animate-[fadeIn_1s_ease_forwards_0.5s] opacity-0" style={{ animationFillMode: 'forwards' }}>
           <div className="text-center mb-12">
@@ -95,7 +94,7 @@ export default function PartnersPage() {
           </div>
 
           <div className="flex flex-col gap-8">
-            {/* プラン1：オフィシャルパートナー（解像度と魅力を大幅アップ） */}
+            {/* プラン1：オフィシャルパートナー */}
             <div className="border-b border-[#e0e0e0] pb-8">
               <div className="flex flex-col md:flex-row md:justify-between md:items-baseline mb-3">
                 <h3 className="font-['Yu_Mincho','游明朝',serif] text-[1.1rem] text-[#141d58] tracking-[0.05em]">01. オフィシャルパートナー提携</h3>
@@ -108,12 +107,12 @@ export default function PartnersPage() {
               </p>
               <div className="bg-[#fafafa] p-5 border border-[#e0e0e0]">
                 <p className="font-['Yu_Mincho','游明朝',serif] text-[0.85rem] text-[#666] leading-relaxed">
-                  例えば、自社のクライアント（学生や若手社会人）をGAKU-HUBの共創プロジェクトに無料で参加させたり、GAKU-HUBのイベント枠を自社の採用・PRコンテンツとしてアップセル商材に組み込むなど、事業シナジーを生み出す強固な共同戦線を構築します。
+                  例えば、自社のクライアント（学生や若手社会人）をGAKU-HUBの共創プロジェクトに無料で参加させたり、GAKU-HUBのイベント枠を自社の事業PR・採用コンテンツとしてアップセル商材に組み込むなど、事業シナジーを生み出す強固な共同戦線を構築します。
                 </p>
               </div>
             </div>
 
-            {/* プラン2：公式スポンサー登録（太字を廃止し、上品なトーンへ） */}
+            {/* プラン2：公式スポンサー登録 */}
             <div className="pb-4">
               <div className="flex flex-col md:flex-row md:justify-between md:items-baseline mb-3">
                 <h3 className="font-['Yu_Mincho','游明朝',serif] text-[1.1rem] text-[#111111] tracking-[0.05em]">02. 公式スポンサー登録</h3>
@@ -126,7 +125,7 @@ export default function PartnersPage() {
               </p>
               <div className="bg-[#fafafa] p-5 border border-[#e0e0e0]">
                 <p className="font-['Yu_Mincho','游明朝',serif] text-[0.85rem] text-[#666] leading-relaxed">
-                  一度スポンサーとしてご登録いただくと、その後はGAKU-HUB主催イベントでのPRピッチ枠（登壇）や、優秀な学生層へのダイレクトリクルーティングなど、必要な時に必要なだけ、成果報酬等の優待価格でマッチングメニューをご利用いただけます。
+                  一度スポンサーとしてご登録いただくと、その後はGAKU-HUB主催イベントでのPRピッチ枠（登壇）や、事業のユーザーヒアリング、優秀な学生層へのダイレクトリクルーティングなど、必要な時に必要なだけ優待価格でマッチングメニューをご利用いただけます。
                 </p>
               </div>
             </div>
@@ -154,7 +153,7 @@ export default function PartnersPage() {
         ========================================= */}
         <div className="max-w-3xl mx-auto text-center border-t border-[#e0e0e0] pt-12 pb-20 animate-[fadeIn_1s_ease_forwards_0.7s] opacity-0" style={{ animationFillMode: 'forwards' }}>
           <p className="font-['Yu_Mincho','游明朝',serif] text-[0.85rem] text-[#777] leading-relaxed mb-4">
-            ※単なるスポンサー登録ではなく、初めから自社の採用支援（ダイレクトリクルーティング）や、<br className="hidden md:block" />
+            ※単なるスポンサー登録ではなく、初めから自社の事業PR（ダイレクトマッチング）や採用支援、<br className="hidden md:block" />
             共創施設でのプロジェクト実行支援（PMO）などのガッツリとした実働ソリューションをご希望の企業様は、<br className="hidden md:block" />
             法人向けプログラム（Corporate Solutions）をご覧ください。
           </p>
