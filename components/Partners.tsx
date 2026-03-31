@@ -22,7 +22,7 @@ export default function Partners() {
           <div className="mb-12 md:mb-16">
             <div className="text-center mb-8 md:mb-10">
               <h3 className="font-['Didot','Garamond',serif] text-[1.1rem] md:text-[1.2rem] tracking-[0.15em] text-[#141d58] mb-2 uppercase">Official Partners</h3>
-              <p className="font-['Yu_Mincho','游明朝',serif] text-[0.8rem] text-[#666] tracking-[0.05em]">インフラを共有し、共に若手の挑戦を牽引する協業アライアンス</p>
+              <p className="font-['Yu_Mincho','游明朝',serif] text-[0.8rem] text-[#666] tracking-[0.05em]">インフラを共有し、共に若手の挑戦を牽引・事業シナジーを生む協業アライアンス</p>
             </div>
             
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10">
@@ -45,7 +45,7 @@ export default function Partners() {
           <div>
             <div className="text-center mb-8 md:mb-10">
               <h3 className="font-['Didot','Garamond',serif] text-[1.1rem] md:text-[1.2rem] tracking-[0.15em] text-[#111111] mb-2 uppercase">Sponsors</h3>
-              <p className="font-['Yu_Mincho','游明朝',serif] text-[0.8rem] text-[#666] tracking-[0.05em]">次世代のチャレンジャーを支援し、共創を加速させる協賛企業様</p>
+              <p className="font-['Yu_Mincho','游明朝',serif] text-[0.8rem] text-[#666] tracking-[0.05em]">次世代の熱量と交わり、新たな事業共創（出会い）を生み出す協賛企業様</p>
             </div>
             
             <div className="grid grid-cols-3 md:grid-cols-5 gap-3 md:gap-6">

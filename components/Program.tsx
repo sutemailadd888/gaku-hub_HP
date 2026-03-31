@@ -76,25 +76,25 @@ export default function Program() {
               For Companies & Organizations
             </span>
             <h3 className="font-['Yu_Mincho','游明朝',serif] text-[1.4rem] tracking-[0.1em] mt-6 font-normal text-[#111111]">
-              次世代の熱量と交わる（法人協業・HR）
+              次世代の熱量と交わる（共創・アライアンス）
             </h3>
           </div>
 
           <div className="bg-[#FAFAFA] border border-[#e0e0e0] p-8 md:p-12 text-center max-w-4xl mx-auto fade-in opacity-0 translate-y-10 transition-all duration-700 delay-200 hover:border-[#141d58] hover:shadow-[0_8px_30px_rgba(20,29,88,0.05)] transition-all duration-500">
             <p className="text-[0.95rem] text-[#555] leading-[2] mb-8 font-['Yu_Mincho','游明朝',serif]">
               「場はあるが実績が生まれない」共創施設での外部PMO（実行支援）や、<br className="hidden md:block"/>
-              自らリスクを取って行動する優秀な次世代人材（チャレンジャー層）へのダイレクトなHR支援・採用PRなど。<br />
-              御社の課題に合わせ、熱量高いコミュニティを活用した最適な協業プランをご提案します。
+              自らリスクを取って行動する次世代人材へのダイレクトな事業PR・マッチングなど。<br />
+              採用という枠を超え、熱量高いコミュニティを活用したあらゆる協業プランをご提案します。
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-[0.8rem] text-[#777] mb-8">
               <span className="bg-white border border-[#ddd] px-4 py-2"># 共創施設PMO</span>
+              <span className="bg-white border border-[#ddd] px-4 py-2"># 新規事業・PRマッチング</span>
               <span className="bg-white border border-[#ddd] px-4 py-2"># イベントスポンサーシップ</span>
-              <span className="bg-white border border-[#ddd] px-4 py-2"># ダイレクトリクルーティング</span>
               <span className="bg-white border border-[#ddd] px-4 py-2"># 公式パートナー提携</span>
             </div>
 
             <Link 
-              href="/program/partner" 
+              href="/program/company" 
               className="inline-block border border-[#111111] px-[3rem] py-[1rem] text-[0.85rem] tracking-[0.1em] text-[#111111] font-['Didot','Garamond',serif] hover:bg-[#141d58] hover:border-[#141d58] hover:text-white transition-all duration-500"
             >
               View Partnership Details

@@ -60,14 +60,14 @@ export default function Service() {
               <span className="font-['Didot','Garamond',serif] text-[6rem] text-[#e0e0e0] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0 group-hover:text-[#cacede] transition-colors duration-700">03</span>
               <h3 className="font-['Didot','Garamond',serif] text-[1.2rem] tracking-[0.15em] relative z-10 pt-4 text-[#111111]">PARTNERSHIP</h3>
             </div>
-            <p className="font-['Yu_Mincho','游明朝',serif] text-[0.85rem] text-[#666] tracking-[0.15em] mb-8 relative z-10">法人向け共創・採用支援</p>
+            <p className="font-['Yu_Mincho','游明朝',serif] text-[0.85rem] text-[#666] tracking-[0.15em] mb-8 relative z-10">法人向け共創・アライアンス</p>
             <p className="font-['Yu_Mincho','游明朝',serif] text-[0.85rem] md:text-[0.9rem] leading-[2.6] tracking-[0.08em] text-[#444] text-left md:text-center px-4 relative z-10">
-              共創施設へのPMO（実行支援）から、優秀な若手人材へのダイレクトリクルーティング（採用支援）まで、法人の課題に合わせて伴走します。
+              共創施設でのプロジェクト実行支援（PMO）から、次世代の熱量を活用した事業PR・マッチングまで、あらゆる共創の結節点として伴走します。
             </p>
             <div className="mt-8 pt-6 border-t border-[#ccc] w-[80%] relative z-10">
               <span className="block text-[0.65rem] font-['Didot','Garamond',serif] tracking-[0.2em] text-[#777] mb-2">TARGET</span>
               <span className="block text-[0.8rem] font-['Yu_Mincho','游明朝',serif] tracking-[0.08em] text-[#555] leading-[1.8]">
-                オープンイノベーション推進企業<br className="hidden md:block"/>人事・採用部門
+                事業会社・共創施設<br className="hidden md:block"/>新規事業・PR・人事部門
               </span>
             </div>
           </div>
